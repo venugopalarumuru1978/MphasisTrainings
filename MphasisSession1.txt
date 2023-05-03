@@ -1,0 +1,175 @@
+Today's Agenda:-
+------------------
+Introduction to Computer Basics
+--------------------
+What is the purpose of learning programming lang.
+		To Develop a Software/Application.
+
+there are different type of applications
+
+1.  Desktop Applications :- these software are used within local system. 
+				Ex:-  Notepad, Calculator, Office Tools(Word, Excel, PowerPoint)
+					In Realtime :- Any Billing Software
+2.  Network Applications :-  these softwares are used in client server enviornment. 
+				Ex:-  Banking Software's
+					Insurance Software's
+3.  Web Applications	 :-  these softwares are used Over the internet. 
+				Ex:-  All web sites
+4.  Mobile Applications  :-  these softwares are used in Mobiles.
+				Ex:-  All mobile apps
+5.  Device Applications  :-  These softwares are used to activate electronic device. 
+				Ex:- All Device Drivers
+-------------------------------------------------------------
+Java Modules
+
+J2SE - java 2 standard edition (core java)
+				Languages Fundamentals
+J2EE - java 2 enterprize edition (Adv java)
+				Application Developments
+J2ME - java 2 Micro Edition
+				Application Developments like Mobile Applications.
+------------------------------------------------------------
+Computer Fundamentals :- 
+
+What is a Computer?
+	it is an electronic device which accept's data, process data and provides desired information.
+
+	Data/Input  ==>  Process  ==>  Information/Output
+
+Data :-  Collection of Raw Material/Collection of Fact and Figures. 
+		Basically data has no meaning. 
+
+Process :-  The work doing using data according to plan.
+
+Information  :-  the processed data is called information.
+
+----------
+Computer Technologies:-
+
+There are 3 Technologies
+	Hardware :- 
+			It is a technology which tells about computer parts and pheripharals. 
+			It has divided into two sections
+				1.  CPU	 :-  Central Processing Unit
+					It is a brain of computer where it performs all types of 
+					processings. 
+					It is also called as processor. 
+					It has 3 sections
+						a.  ALU =  Arithematic and Logical Unit
+						b.  CU  = COntrol Unit
+						c.  MU  = Memory Unit
+				ALU allows to perform all kinds of calculations. 
+		`		CU  allows to control all types Processing Operations.
+				MU  is a storage unit of the computer.
+Memory Unit again classified into two types
+Primary Memory		:-  It is a kind of storage unit where it allows to store info temporarly. 
+				There is a device for Primary Memory
+					RAM :-  Random Acess Memory
+						It stores users data
+					It has capacity like 4GB, 6GB, 8GB, .....
+					ROM :-  Read Only Memory
+						It allows to store some info where we cannot modify it
+						we can only read that info. 
+						It consist of Computer related info 
+						about Processor, RAM, Disk, .....
+Secondary Memory 	:-  It is a kind of storage unit where it allows to store info permenently. 
+					1.  HardDisk (HDD) 
+					2.  SSD (Solid State Drive)
+						these two are fixed disk for the computer. 
+					3.  Pendrive (Plug and Play)
+					4.  CD's, DVD's
+
+Memory Messaurements(Data):- 
+
+System process and stores data in the form of Bits and Bytes(1,0,1,0,1,0,...).
+8 bits = 1 byte
+1024 bytes = 1 Kilo Byte
+1024 KB = 1 Mega Byte
+1024 MB = 1 Gega Byte
+1024 GB  =  1 Tera Byte
+1024 TB =  1 Peta Byte
+					
+			2.  Pheripharals :-  External parts of computer is called pheripharals.
+
+				Input Devices	:-  these are used to provide input to the computer
+							Keyboard
+							Mouse
+							Scanner
+							JoySticks
+							LightPen
+				Output Devices	:-  these are used to provide output of the process.
+							Moniter
+							Printer
+							Plotters
+
+Software :- The set of instructions should be given to the computer to perform a task. 
+			that group of instructions is called as program. 
+		To collection of programs called as Software. 
+
+Software are classified into two types
+		1. System Software
+				These softwares are used to activate computers.
+					Ex:-  Operating Systems.
+		2. Application Software
+				These softwares are used to fullfill the requirements of the users. 
+				These are again classified into two types
+					a.  PACKAGES
+					b.  PROGRAMMING LANGUAGES
+
+Package :-  It is a readymade software to perform a specific task. 
+			Ex:-  Office Tools(Word, Excel, PowerPoint)
+				Account Based Packages (Tally, Wings, Peach, ...)
+				Graphic Based (Photoshop, CorelDraw, PageMaker, ...)
+
+Programming Languages :-  These are used to create packages based on user requirement. 
+				Ex:-  Basic, Cobol, Pascal, 'C' lang, C++, Java, .....
+
+
+Operating System :- It is an interface b/w computer and user. 
+				It is soul of computer. 
+
+	The Operating Systems are classified into two types
+			1.  CUI based operating systems
+				CUI - Character User Interface, where it provides command prompt
+					to work.
+						Ex:- MS-DOS (Microsoft Disk Operating System)
+						     Unix
+			2.  GUI based operating systems
+				GUI - Graphical User Interface, where it provides desktop to work. 
+					Ex:-  Windows, Linux, Ubantu, Mac OS, ...
+
+	Booting :- The process of loading operating system from secondary memory to primary memory is 			called booting. it happens whenever switch on computer. 
+Liveware - Human Being
+------
+Computer Networks :-
+
+Network :- An interconnection b/w two or more than two computer(s) called as Network. 
+
+The n/w are two types
+
+1.  P2P Network  :-  this type of network connects only two computers directly with network cable. 
+2.  Client Server based Network :- 
+
+There is a computer called as Server, it consist all the softwares related particular org and data storage also exist. From this server other computers are interconneted with router(device). so that other computers called as client/work stations. 
+
+Features :-  
+
+1.  Security of the data
+2.  Sharing Data with multiple resources. 
+
+
+As per the Client Server based Network, it can be used in 3 ways
+
+1.  LAN  :- Local Area Network
+2.  MAN  :- Metropoliton Area Network
+3.  WAN  :- Wide Area Network
+
+
+LAN :- This type network is used for Local Offices where it consist of one server and group of work stations.  here server and work stations are connected with cables via router device. 
+
+MAN :-  This type network is used to communicate with different location placed in different places.
+	i.e. City to City
+		This type network mainly used for TV Channels   
+WAN :-  This type of network is used connect world wide with internet facility. 
+
+	Internet :-  Networks of Network/Global Network.

@@ -1,0 +1,176 @@
+Today's Agenda:- 
+----------------
+SDLC :-  Software Development Life Cycle
+------------------------
+What is a Project? 
+	It is a application/software which is solution for specific requirements. 
+
+Software Development Paradigms
+It is known as Software engg. where all the engg. concepts pertaining to the development of software are applied. 
+
+It includes various researches and requirement gathering which helps the software product to build. 
+		R & D :-  Research & Development
+
+It consist of 
+		1.  Requirements Gathering
+		2.  Software Design
+		3.  Programming
+
+School Application:- 
+	Req. Gather
+		We have to know the complete manual functionality of that particular School. 
+			1.  Admission Process
+			2.  Class Scheduling Process
+			3.  Salaries of the Employees
+			4.  Collecting Fees 
+			5.  Games / Sports Conducting Process
+			6.  Cultural Activities
+			7.  Examination Process
+	Software Design
+			1. Program for Admission Process
+			2. Program for Examination Process
+			3. Program  for CLass Scheduling
+			4. Program for Fees Collecting
+			.....
+			......
+	Programming(Development)
+			Here we have to choose relvent programming lang and databases to develop
+			an application, then we have to start writing code 
+
+Development process includes :-
+			Design
+			Programming
+			Testing
+			Maintaince
+--------------------------------------
+Designing :-  Application Problem statement, based on that we have to divide the project into modules.
+Module is a one section of the application. Next in every module has to identify tasks. 
+
+School Application Modules :- 
+			 Students Module
+			     Admission/Reg, Classes, Examination, Marks, Attendance, Progress Report
+		 	 Employees Module
+			     Biodata, Designation Details, Salary Details, Class Details
+			 Library Module
+			     Books Details, Member Details, Maintaince, ...
+			 Transportation Module
+			     Vechicle Details, Route Details, 
+Programming :-  Here based on client requirements for the application, suitable programming lang
+			and database for the data storage has to be selected. 
+				Java, Dotnet, Php, Python, .....
+				Oracle, SQL Server, MySql, Postgre SQL, ......
+				HTML, CSS, JavaScript, Angular, React, ....
+Testing :-   Testing is one of the most important aspect of the application development. 
+		Until and Unless test the application, we should not give that application to the 		client.
+		Note :-  Once testing team is certified, application has no bugs, then it will be 		delivered to the client.
+
+Integration/Implimentation :- 
+	Here application has to be configured in client enviornment as per the type of application. 
+
+Type of Applications:-  Desktop, Network, Web, Mobile, Device.
+
+Integrations :-   
+if it is web app,  it has to host on Internet Servers. 
+if it is Mobile app, it has to host on Google Play Store/Iphone Play Store
+if it is Desktop/Device, it has to install in particular local system. 
+if it is network app,  it has to install in particular relavent server. 
+
+Maintaince :- It is the process handling any issues comes with that application. 
+------------------------
+SDLC :- 
+The purpose of the SDLC is to generate a large system that satisifies customer expectations, 
+performs effectivly and efficiently in current and projected infromation technology infrastructure
+as well as economically to maintain and enhance. 
+
+SDLC :- 
+
+1.  Planning
+	The first duration of development project
+	Analysis, design, development,  deployment, maintaince
+2.  Defining :-
+		It defines  the logical framework of each modules(identify tasks with conditions). 
+3.  Designing:- 
+		It is the process of creating wireframes of the every task. 
+		WireFrame is a rough design(UI:- User Interface) of the program.	
+4.  Coding   :- 
+		here based on wireframes, development has to started. 
+5.  Testing	:- 
+		Once development done, it has to be tested
+6.  Deployment/Integration :- once testing is done, it has to deploy the application in enviornment.
+-----------------------------
+
+SDLC Models :- 
+
+WaterFall Model
+V-Model
+Incremental Model
+RAD Model
+Agile Model
+Iterative Model
+Spiral Model
+
+Waterfall Model:- 
+The waterfall is a cascade SDLC Model that includes gradual executions of phases. 
+
+A Task can also called as User Story. 
+
+This model is a breakdown of the project activties into linear sequential phases. 
+
+Each Phase depends on the devlierables of te previoues phase, this apporach is typical for certain areas of engg. design. 
+
+This process is documented and predefined with features expected to every phase. 
+
+This model mostly applied for Small and Mid-Sized projects. 
+---
+Testing Phase :- 
+
+There are different types of testing's 
+
+1. Unit Testing
+2. Integration Testing
+3. System Testing
+4. Acceptance Testing
+5. WhiteBox Testing
+6. BlockBox Testing
+
+In waterfall model all types testing is not possiable. So that here we can use other Model called as 
+V-Model. 
+----
+Incremental Model:-
+
+It is a software development process that distributes requirements into multiple stand-alone modules during the software development cycle.
+
+Example :- E-Commerce Portal
+
+Amazon.in :- 
+
+1. Electronic Items
+2. Jewellery
+3. Groceries
+
+RAD Model :- 
+
+RAD :- Rapid Application Development
+
+The incremental prototyping technique to software development is known as RAD. 
+
+Agile Model :-
+
+A software development approach based on iterative development is refered as "Agile Model". 
+
+this model separates projects into smaller iterations, or sections and avoid long-term planning. 
+
+Customers can view the result of each development iteration in the Agile process and decide if they are satisfied or not. 
+
+Agile follows Scrum Methodlogoy. 
+
+it is an alternative model for all the traditional models of software development. 
+
+Iterative Model :- 
+
+This model allows the team to go back in time and visit prior phases where the changes were made, When the SDLC Model is completed, the projects final result is renewed. 
+
+Spiral Model :- 
+
+It is a combination of WaterFall and Iterative SDLC Model, so that is also called as Hybrid Model. 
+The purpose of this model is Focusing risk assessments of the projects. 
