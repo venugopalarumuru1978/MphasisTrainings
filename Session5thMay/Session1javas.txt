@@ -1,0 +1,182 @@
+Today's Agenda:- 
+----------------
+1. Intro to Java
+2. Tokens of Java
+	Variables
+	Constants
+	Keywords
+3. Data Types
+4. Strcture of Java
+5. First Program of Java
+------------------------
+What is a Java?
+It is a Pure Object Oriented Progamming Language is used to develop different type of applications. 
+		Desktop, Network, Web, Mobile, Device
+
+Object Oriented Programming Structure(OOPS) is programming architecture which has set of concepts.
+
+Based on OOPS there are different programming languages
+		C++, C#.Net, VB.Net, JAva, Python, .....
+
+
+The Lang's which follows 100% OOPS concept is called Pure OOPS. 
+
+It has 3 Modules :- 
+	J2SE :-  Java 2 Standard Edition  (Core Java)  :-  All the programming fundamentals.
+	J2EE :-  Java 2 Enterprize Edition (Adv. Java) :-  Application Development will be done. 
+	J2ME :-  Java 2 Micro Edition	:-  It is meant for developing Mobile Apps. 
+
+All java applications are platform independent applications. 
+--------
+Program :-  Collection of / set of instruction should be given to the computer for a specific task.
+			or
+		Solution for a problem statement. 
+
+There are some elements needed to write a program, those elements called as tokens. 
+			Variables, Constants, Keywords, .....
+
+
+Variable:- It is a named memory location to store values temporarly. 
+				(or)
+		It is an identifier where the values can change whenever we need it. 
+
+		Rules :-  
+			1. Variable Name must be one word.
+			2. Variable name must start with either an alphabet / a symbol (_).
+			3. Keywords should not be as variable name.
+
+		Syntax:-
+			<data type>  <variablename> [= <value>]
+
+Constant :-  It is also kind of variable but it will not allow to modify value once it is assigned 		during the program execution.
+
+Keyword :-  
+    These are special words of the programming lang, which has specific action within the language.
+		there are so many keywords are exist
+				byte, char, int, long, double, float, private, public, protected,
+				void, if, else, for, switch, case, break, boolean, class, enum, 
+				extends, implements, interface, static, do, while, continue,....
+
+Data Type:- Classification of the data. 
+
+In General Data is classified into two types
+		1.  Textual Data :-  
+				Character  :-  It is an alphabet/a digit/a symbol
+				String :-     Collection of characters
+		2.  Numeric Data
+				Integers  :-  All whole numbers
+				Decimals  :-  All real numbers
+As per the programming there are two types of data types
+		1.  Value Type Data Types
+			These are allows to store values directly in variable. (or)
+			here all primitive data types(data types providing by lang).
+				Keywords :-  byte, short, int, long, float, double, char, boolean 
+		2.  Reference Type Data Types
+			These are allows to store values in the form of objects. (or)
+			here user defined data types also called reference type.
+				Keywords :-  enum, class
+
+
+Integer Data Type Keywords :-   byte, short, int, long
+Decimal Data Type Keywords :-   float, double
+Character Data Type Keywords :-  char
+Boolean Type Keyword :-  boolean
+
+For Every variable, there is a name, value and it's capacity exist.
+ 
+int x = 100;
+float y = 12.34;
+char ch = 'A';   // every character value should enclose within the single quotes('  '). 
+boolean b = true;
+---------------------------------
+Structure of Java:- 
+
+importing packages 
+class <classname>
+{
+	public static void main(String[] args)
+	{
+		body of the program
+	}
+	.....
+}
+
+1. Package:- As per java packages are library files of the java progrmming lang.
+		A package consist of "Collection of classes, interface, and inner classes, ....". 
+		Every class consist collection of methods/funtions.
+			java.util, java.lang, java.io, java.sql, .....
+		there is a keyword called as "import" to get a package into program. 
+				import java.util.*;	// * represents all the classes
+				import java.util.Scanner; // Scanner is only one class
+
+2.  Every java program starts with "class"  and identified with "classname". 
+3.  Every class contains collection of user defined methods along with main() method. 
+4.  Program execution starts wtih main() method, and it will not return any value(void).
+5.  Every java program having an extension .java and classname will be the filename. 
+-------------------
+Output Statement :-   This statment prints output on Moniter. 
+
+System.out.println("stmt"/variable) :-  it prints line by line.
+System.out.print("stmt"/variable) :-  it prints side by side.
+----------------------------
+
+class DemoClass
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Welcome to Java Learners");
+	}
+}
+
+Software Requirements :- 
+-----------------------
+For Java,  we need to download JDK with specific version. 
+JDK :-  Java Development Kit
+
+jdk 8.0 and above version. 
+One IDE :- Eclipse 
+-----------------------
+Once JDK is installed, it will install two softwares, 
+	JVM :-  Java Virtual Machine
+			It will take entire program execution process. 
+			It consist of different OS enviornments. 
+
+	JRE :-  Java Runtime Enviornment
+		It will provide enviornment for java application along with it's suiable library.
+------------------------
+Operators :- It is a symbol which has specific action b/w operands. 
+
+Arithematic :-  +, -, *, /, %
+Relational :-  >, <, >=, <=, !=(not equals), ==(equals)
+Logical :-  &&(AND), ||(OR), !(Not)
+Unary :-  ++ (increment  by 1)
+	   -- (decrement by 1)
+Assignment :-   =, +=, -=, /=, *=, %=
+conditional :-   ? : (<condition> ? <true> : <false>)
+bitwise :-   &, |, <<, >>
+concatenation :- + ( it can used to concatenate two strings / string with any other type value)
+-----------------------
+Scanner Class :- 
+this class is used to read values into variable at the time of program execution. 
+
+Steps :- 
+	1.  import Scanner class package
+		import java.util.Scanner;
+	
+	2.  Create an object for Scanner class as follows
+		Scanner <object> = new Scanner(System.in);
+					System.in :- a specifies a device(keyboard).
+	
+	3. Use following methods
+		int = nextInt()
+		float = nextFloat()
+		long = nextLong()
+		double = nextDouble()
+		String =  next(), nextLine()
+		short  = nextShort()
+		byte = nextByte()
+		char  = nextCharacter()
+
+	these methods has to used along Scanner Class Object.
+		variable = scannerObj.methodname()
+
