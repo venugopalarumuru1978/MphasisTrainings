@@ -1,0 +1,188 @@
+Today's Agenda:-
+----------------
+1.  Control Statements
+		If Statement
+		Switch Statement
+		Looping Statements
+2.  Arrays & Strings
+----------------
+Control Statements :- 
+----------------
+These statements are used to control the flow of program execution. 
+these are 3 types
+	Conditional
+	Branching 
+	Looping
+
+Conditional :-  These are used to check conditions, based on condition true/false some statements are 			executed.
+		here if statement is used to check conditon. 
+	
+Simple If :- 
+	if(condition)
+	{
+		set of statements
+	}
+
+If - Else 
+	if(condition)
+	{
+		set of statements-1
+	}
+	else
+	{
+		set of statements-2
+	}
+
+else if 
+	if(cond-1)
+	{
+		set of statements-1
+	}
+	else if(cond-2)
+	{
+		set of statements-2
+	}
+	......
+	......
+	else
+	{
+		set of stmts
+	}
+Nested If:-
+	An If condition within another if condition without else part. 
+	if(cond-1)
+	{
+		if(cond-2)
+		{
+			set of stmts
+		}
+	} 
+------------------------------------------------
+Branching Statement :-  
+These statements are used  to check multiple condition on single variable weather value is equal or not.
+
+switch(variable)
+{
+	case <val-1>:
+		set of stmts
+		break;
+	case <val-2>:
+		set of stmts
+		break;
+	................
+	................
+	case <val-n>:
+		set of stmts
+		break;
+	default:
+		set of default stmts
+		break;
+}
+--------------------------
+Loops :- These are used to repeat the process / task for n number of times. 
+as per java there are 3 loops
+
+1.  while loop
+2.  for loop
+3.  do - while loop
+
+while loop :- 
+This loop repeat's it's task until the given condition is true. 
+
+variable initial value
+while(condition)
+{
+	set of statements
+	increment / decrement operations
+}
+
+	int x = 1;
+	while(x<=5)
+	{
+		print("Hello");
+		x++;
+	}
+
+For Loop :-  it is as same as while loop but initilization, condition and iteration comes under one line. 
+
+for(initlization;condition;iteration)
+{
+	set of stmts
+}
+
+do while :-  It is also as same as while loop but the condition will be placed at the bottom of loop.
+
+variable initial value
+do
+{
+	set of statements
+	increment / decrement operations
+}
+while(condition);
+
+Nested loops :- 
+A loop within the loop is called nested loop. 
+purpose :-  to repeat the looping process. 
+-----------
+
+Unary Operators :-  
+
+++ increment by 1
+-- decrement by 1
+
+int x = 10;
+
+x++ / ++x = 11
+
+Pre / Post Increment 
+
+Post :-   operator comes at right side of the variable
+		x++
+	First assign existing value to the variable then action
+Pre  :-   operator comes at left side of the variable
+		++x
+	First action then assign that value to the variable.
+
+---------------------------------------------
+Arrays :-   It is a variable which allows to store multiple values of specific data type. 
+
+As per java there are 3 types arrays 
+				1.  Single Dimensional Array
+				2.  Double / Multi Dimensional Array
+				3.  Jagged Array
+
+Single Dimensional Array :- 
+			The process of arranging values either in single row / single column. 
+			
+			Syntax :- 
+				<data type> <variable>[] = {val1, val2,....};
+					initilization
+				int x[] = {10,20,30,40,50};
+
+				to access every value from array, it will provide an index number
+				starts with 0, 1, .......
+					arrayName[index]  == for set/get value
+				
+				<data type> <variable>[] = new <data type>[size];
+				int x[] = new int[5];
+Double Dimensional Array :- 
+		The process of arranging values in no of rows and columns.
+			
+			Syntax:- 
+				<datatype>  <variable>[][] = {{val1, val2, ...}, {val3, val4, ...},..}
+				Initlization
+				<data type>  <variable>[][] = new <data type>[rows][cols];
+				Dynamic Process
+Jagged Array :- The process of grouping different sizes of single dimensional arrays as one array. 
+		i.e. here no of rows are fixed but in every row different no of columns present.
+		
+<datatype>  <variable>[][] = {{val1, val2, ...}, {val3, val4, val5, ...}, ..};
+	int x[][] = {{10,20,30}, {40,50}, {60,70,80,90}};
+
+<data type>  <variable>[][] = new <data type>[rows][];
+
+int x[][] = new int[3][];
+x[0] = new int[4];
+x[1] = new int[2];
+x[2] = new int[3];
+
