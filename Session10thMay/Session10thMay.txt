@@ -1,0 +1,159 @@
+Today's Agenda:-
+----------------
+Strings 
+Introduction to Object Oriented Programming
+-----------------------------
+What is a String?
+
+String is a collection of characters/Array of characters.
+In java, to work with strings, It Provides "String" class. 
+it has collection of methods to perform different operations on strings. 
+
+String  <variablename/object> = "Value";
+
+String str = "Java Course";
+  
+Methods :- 
+
+toUpperCase() :-  to print string in upper case
+toLowerCase() :-  to print string in lower case
+length() :-  to find length of the string
+charAt(index) :-  it returns a character based on index position.
+equals() :-  it is meant for checking two strings are equals or not. 
+equalsIgnoreCase() :-  it is as same as equals() but it ignores case.
+contains() :-  it allows to check a char/sub string from the given string. 
+compareTo() :- this method is used to compare two string then finds which is big/small/same strings.
+			if first string is big compare to second string it returns >0 value
+			if first string is samll compare to second string it return <0 value
+			if both are same, it returns 0
+ASCII Values :- 
+
+A-Z :  65-90
+a-z :  97-122
+0-9 :  48-57
+compareToIgnoreCase() :-  it is as same as compareTo(), but it ignores case.
+concat() :-  it allows to concatenate two strings. 
+
+String objects are immutable.  i.e. Once value stored in string variable, that cannot modify. 
+
+split() :-  this method spilts string based on character and returns String array. 
+indexOf(string) :- it will print a substring index position based on Substring.
+----------------------------------------------------------------------------------
+int = Integer   = parseInt(String)
+float = Float   = parseFloat(String)
+long = Long     = parseLong(String)
+double = Double = parseDouble(String)
+
+these all classes are having method to convert a string oriented different type of value into their native type.  
+---------------------------------------------------------------------------------
+Object Oriented Programming Structure(OOPS):-
+
+It is a programming architecture is used to provide security for the data while developing an applications.
+		OOPS Concepts
+				Object
+				Class
+				Data Abstraction
+				Data Encapuslation
+				Inheritance
+				Polymarphisum
+
+What is an Object?
+		It is a thing in the real world which has set of attribute and some functionalities. 
+		
+		Ex:-  Mobile Phone is an Object
+				Attributes
+					-> Model
+					-> Company 
+					-> Memory Capacity
+					-> Color
+					-> Batter Backup
+					-> Size 
+				Functionalities
+					-> Making Calls
+					-> Surfing Internet
+					-> Recording Audio/Video
+					-> Storing Data
+
+In other words, any object is an instance of their parent unit. 
+
+Class :-  
+It is an encapsulated cell which meant for defining attributes and functionalities for an object.
+			or
+It is an BluePrint for an object. 
+			or 
+It is a user defined data type.
+
+class  <classname>
+{
+	variables
+	methods(user defined functions)
+}
+
+class  DemoClass
+{
+	int x, y;   // instance variables(these can access in all the methods of the class).
+
+	void getdata()
+	{
+		x = 10;
+		y = 20;
+	}
+
+	void putdata()
+	{
+		print(x);
+		print(y);
+		int sum = x+y;  // sum variable call it as local variable, we can this variable only
+					within that function.
+		print(sum);
+	}	
+}
+
+Object :-  Instance of class
+
+<classname> <objectname> = new <classname>([args]);
+DemoClass  dc1 = new DemoClass();
+
+1. Objects will be created either in the same class if it exist main() method/In any other class whereever it is required. 
+2. With the help of Object the members of the class has to be access as follows						ObjectName.MemberName(variables/methods)
+3. For a class we can create any no of objects.
+
+Access Specifiers :- 
+These are used to specify how to access class members either inside / outside of the class.
+
+private		:-  It allows to use class members only inside the class.
+public 		:-  It allows to use class members inside and outside the class.
+proctected 	:-  It allows to use one class members into another specific class only.
+
+by default every member of class is "public".
+
+Classification of Class Members:- 
+As per java there are two type of members
+1. Non-Static Members :- 
+	these members are binded with class object, these are used to get multiple copies of data.
+2. Static Members :- 
+	these members are binded with class, these are used whenever we need single copy of data. 
+
+	a.  static members are declared with "static" keyword.
+	b.  A static method can handle only static variables, whereas non-static method can handle 		both static and non-static variables.
+	c.  Static member won't occupy any memory in an object of class, it has separate memory called
+			as ClassMemory, so that to call static methods use "classname".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
