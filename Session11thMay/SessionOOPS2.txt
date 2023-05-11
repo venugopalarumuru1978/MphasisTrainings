@@ -1,0 +1,131 @@
+Today's Agenda:-
+----------------
+1. Constructor
+2. Getter and Setter Methods
+3. Inheritance
+4. Abstraction
+	Abstract Class
+	Interfaces
+-----------------
+Constructor :-
+It is a special method of the class, which has same name of the class. 
+purpose :-  to specify initial process of an object. i.e. to initilize instance variables at the time object creation.
+
+classname([arguments])
+{
+	body of the constructor
+}
+
+1. it will be executed whenever object created for the class. 
+2. It can take para meters(arguments), for parameters we have to pass values at the time object creation. 
+3. A class can have multiple constructors, but every constructor should have different no of parameters. 
+4. By default a constructor existed in every class whcih is called as "default constructor". 
+---------
+this keyword :-  
+it is used to separete instance variables and parameter variables when both are having same name. 
+		this.instance_variable = parameter_variable
+--------
+Getter and Setter Methods :- 
+these are special methods which are meant for accessing a class private variables outside the class. 
+Getter methods are used to access value from variable
+	<return type> getVariableName()
+	{
+		return variable
+	}
+Setter methods are used to store value into a variable
+	void setVariableName([arg])
+	{
+		this.variable = arg;
+	}
+
+As per the setter methods, it also used to validate value in a variable. 
+--------
+While working projects, we have to create some classes where it has to handle only data. 
+So that, the class consist of variables, getter and setter as well as constructor if required.
+-----------------
+Inheritance :- The process of getting features from existing item to new item is called as Inheritance
+Purpose :- re-usablity of the classes
+
+here existing items are called as parent/base/super classes
+and new items are called as child/dervied/sub classes. 
+
+parent - child
+base - derived
+super - sub
+
+Inheritance will be done always from parent to child classes, it can be done with "extends" keyword.
+
+class <child classname>  extends <parent classname>
+{
+
+}
+
+when classes are under inheritance, just create an object for child classes then call methods of parent and child classes. 
+
+to activate parent class data into child class use "protected" access specifier in parent class while declare variables. 
+
+Constructors in Inheritance :- 
+------------------------------
+1.  A parent class constructor will be executed with child class object if it not having any parameters.
+2.  if both parent and child classes are having constructors, both will be executed with child class object, if both constructors are not having any parameters. 
+3.  if parent class constructor having parameters, then that constructor has to call in child class constructor with "super" keyword. 
+---------------
+Abstraction :- 
+
+It is a process of hiding the implementation details and showing only functionality to the user. 
+
+Abstraction can be achieved in two ways :-
+
+1. Abstract Classes (partial implementation(0-100%)
+2. Interface (100%)
+
+Abstract Class:-
+The class which should not allow to create an object is called abstract class. 
+it consist of abstract and non-abstract(concreate) methods. 
+
+abstract method can be declared in abstract class and defined in it's child class. 
+
+Points :- 
+
+1.  abstract keyword is used to create abstract class
+	abstract class <classname>
+	{
+		abstract  <return type> methodname(....);
+	} 
+2.  Abstract class will not allow to create an object, so that it must be a parent class in 			inheritance.
+3.  It can have constructors.
+
+Interface :- 
+it is one type of class where it allows to only declaration of the methods. An interface is also called as Pure Abstract Class.
+
+interface <interface name>
+{
+	method declarations
+}
+
+Points :- 
+1. it is used to achieve 100% data abstraction. 
+2. it supports multiple inheritance
+3. it supports loosely coupling. 
+4. once interface is created, that has to inherit to it's child class with "implements" keywords.
+	class <classname> implements <interface_name, ....>
+	{
+		
+	}
+5. In child class, all the interface methods has to defined.
+6. if required an inheritance will be established b/w interfaces
+	interface iface1
+	{}
+
+	interface iface2 extends iface1
+	{}
+
+7.  A child class can inherit one parent and no of interfaces, here first parent class then interfaces has to inherit
+
+class parent
+
+interface iface1
+
+inteface iface2
+
+class child extends parent implements iface1, iface2
