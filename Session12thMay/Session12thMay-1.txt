@@ -1,0 +1,134 @@
+Today's Agenda:-
+----------------
+1. Polymarphisum
+2. Exception Handling
+3. I/O Streams
+----------------
+Polymarphisum :-
+
+The process of defining multiple actions on single unit is called as Polymarphisum.
+
+It can be  achieved in two ways 
+Overloading  :- 
+		Add on features to the existing unit without chagning it's default action. 
+		This process is implemented on Method, so that it is called as method overloading. 
+
+Method Overloading:- the process of grouping similar kind of different action under one unit. 
+			 Here all the methods having same name, but different actions. 
+			Rules :- 
+				1. Every method should have different no of arguments. 
+					void Sample()
+					void Sample(int x)
+					void Sample(int x, float y)
+				2. If no of arguments are same, then change the data type of arg. 
+					void Sample(float x)
+					void Sample(int x, int y)
+Overriding   :- 
+		Replacement features of the existing unit, here existing unit default action will be 				modified.
+
+		If we implement this concept on Method, then it is called as Method Overriding. 
+
+Method Overriding :-  It can be implemented whenever parent and child classes are having same content.
+			i.e. same method names including parameters as well as count of methods. 
+
+		Rules :- 
+			1.  Classes are under inheritance
+			2.  Both parent and child classes should same name and count of methods 				inculuding parameters
+			3.  Create an Object for Parent class, then call the methods.
+			4.  Create an Object for Child Class, then assign that object to the parent 
+				class object(Overriding).
+			5.  Now call the methods with parent class object, it calls child methods. 
+------------
+Note :-  If both parent and child classes are not having same content, but some ofthe methods are having  same name, in this case, by using super keyword, we can parent class method into child method.
+--------------------------------------------------
+Exception Handling:-
+
+In Every Programming Lang, there is a process how to handle errors. 
+
+Errors are two types
+
+1.  Compile Time Errors
+		These are occurs at time of coding / at the time of compiling. 
+			a.  Missing Semi-Colon
+			b.  Missing Double Quotes
+			c.  Improper usage of statements/methods(Syntax).
+2.  Run Time Errors
+		These are occurs at time of program execution. 
+			a.  Providing Invalid Inputs
+			b.  Performing Invalid Calculations
+
+Exception Handling is the process of handling run-time errors / abnormal situation of the program execution. 
+
+Java provides following keywords to handle it.   "try, catch, finally, throw, throws"
+
+try :-  this block allows find an exception while executing program, if any exception found then it stops the program execution send error info to the catch block. 
+
+catch :-  this block allows to handle exception whenever it recieves error info from try  block. 
+
+try
+{
+	Actual Program
+}
+catch(ExceptionName obj)
+{
+	error handling program
+}
+finally
+{
+	code must execute
+}
+
+Every exception having it's own pre-defined class,  these all classes are child classes of "Exception" parent class. 
+
+Exception class can handle any type exception. 
+
+A try  block can have multiple catch blocks. Each catch block can handle one exception. 
+
+finally :- 
+    this block is used to execute set of stmts weather program may or may not having an exception.
+
+Classification of Exceptions :- 
+
+there are 3 types 
+
+1. Unchecked   :-  these exceptions raise at the time of program execution, these are handled by 
+			try and catch blocks. 
+2. Checked     :-  these exceptions raises at the time of coding itself. these has to handle
+				with "throws" keyword. 
+			void method_name(arg...) throws <exception_name>
+			{
+				.....
+			}
+3. User Defined  :-  these exceptions are created by the user and raised by the user and handled by 			the user.
+
+	a.  Create a class for an exception then extend Exception Class.
+	b.  Raise that exception class with "throw" keyword.
+	c.  handle that excetpion in catch block.
+------------------------------
+IO Stream :- 
+
+What is meant by  a Stream?
+	It is a sequence of bits and bytes flowing from one medium to another medium. 
+	
+As per Java there are 3 standards streams
+
+	System.out :- Standard Output Stream(Moniter)
+	System.in  :-  Standard Input Stream(Keyboard)
+	System.err :-  Standard Error Stream(Moniter - text will print in red color)
+
+As per the concept there are two types streams 
+
+InputStream  & OutputStream :-  these two are Abstract classes having some predefined methods and also some child classes. 
+ 
+OutputStream
+
+1) public void write(int) throws IOException	is used to write a byte to the current output stream.
+2) public void write(byte[])throws IOException	is used to write an array of byte to the current output stream.
+3) public void flush()throws IOException	flushes the current output stream.
+4) public void close()throws IOException	is used to close the current output stream.
+
+InputStream :- 
+1) public abstract int read()throws IOException  : reads the next byte of data from the input stream. 						It returns -1 at the end of the file.
+2) public int available()throws IOException	returns an estimate of the number of bytes that can be 						read from the current input stream.
+3) public void close()throws IOException	is used to close the current input stream.
+

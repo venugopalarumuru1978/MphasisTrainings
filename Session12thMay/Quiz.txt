@@ -1,0 +1,26 @@
+Quiz Program :- 
+
+1.  Who is PM of India?
+a.  Modi   b. Rahul    c. Sonia
+Your Answer :  a
+	Correct
+
+2.  What is the capital city of India?
+a. Hyd		b. Delhi	c. Mumbai
+Your Answer : a
+	Wrong
+
+3.  Where is Parlament is located?
+a.  Delhi	b. Mumbai	c. Pune
+Your Answer :  a
+	Correct
+
+-- continue 10 	questions
+
+
+Score :  2/3  (correct answer / total no of questions)
+
+Show Correct Answer for  Wrongly Answered Questions
+
+2.  What is the capital city of India?  - Correct :-  b. Delhi
+
