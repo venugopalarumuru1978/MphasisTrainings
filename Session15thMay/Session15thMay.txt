@@ -1,0 +1,86 @@
+Today's Agenda
+--------------
+File I/O Streams
+Collections
+	List
+	Set
+	Map
+-------------
+File I/O Streams :-
+
+This concepts tells that how to store data into file as well as how to retrive / read data from file. 
+
+FileOutputStream  & FileInputStream
+FileWriter  & FileReader
+
+FileOutputStream :-This class is used to create new file and allows to write data into file in the form of binary format(file consist data in actual format). 
+
+FileOutputStream   <object> = new FileOutputStream("FileName")
+
+FileInputStream :-  This class is used to read data from file. 
+
+FileInputStream  <object> = new FileInputStream("FileName");
+----------------------------------------------------
+FileWriter :-  This class as same as FileOutputStream but it allows to write data directly in text format and it give's a feature adding new content to the existing file. 
+
+FileWriter  <fwObject> = new FileWriter(filename, true/false)
+
+true :- append mode, allows to append data
+false :- write mode, allows to write/replace data
+
+FileReader  :-  This class allows to read data from file line by line. But it requires another class called as "BufferedReader", this class provides readLine() method to read content line by line. 
+
+FileReader <fileObj> = new FileReader(filename)
+BufferedReader  <object> = new BufferedReader(filereaderObj)
+----------------------
+File :- This class is used to perform different operations on disk. 
+
+File  <object> = new File(filename/foldername/location);
+
+createNewFile() :-  to create a empty file.
+mkdir() :- to create a folder
+delete() :- to delete a file/folder
+exists() :- to check given file/folder is existed or not. 
+isFile() :- to check given name is file or not
+isDirectory() :- to check given name is folder or not
+list() :- it retrives all the file and foldernames.
+---------------------------------------------------------------------------
+Collections :- 
+
+
+java.util package exist all the collections. 
+
+Methods in Collection Interface:-
+---------------------------------
+add(object) :-  to an item to the collection
+remove(object) :- to delete an object from collection
+contains() :- to check an object from the collection
+size() :- to count no of objects are exist in collection
+isEmpty() :- to check the given collection empty or not. 
+equals() :-  to check any objects are equal or not in collection. 
+removeall() :-  to delete all objects we can also use "clear()" method. 
+
+List Interface in Collection:- 
+------------------------------
+It is a child interface of Collection, it inhibits a list type data Structure in which we can store ordered collection of objects and it allows to have duplicate values. 
+
+it is having 4 implemented classes :-
+
+ArrayList, LinkedList, Vector, Stack
+
+ArrayList :- It uses a dynamic array to store ordered collection of values which includes duplicates also. 
+
+1. It uses dynamic array
+2. It maintains insertion order of values
+3. It is a non-synchorined, which tells that parellel processing.
+
+		List<Data type> = new ArrayList<Data type>()
+ 
+
+Iterator Interface :-  this interface provides iterating elements in a forward direction only. 
+it has followin methods
+
+hasNext()  :-  it returns true if the iterator object having a value.
+
+next() :- It returns the element from the iterator and the cursor moves to next pointer(element).
+
