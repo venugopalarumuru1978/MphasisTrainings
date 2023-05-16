@@ -1,0 +1,130 @@
+Today's Agenda
+--------------
+Collections
+	List
+	Set
+	Map
+Sorting Methods
+--------------
+List :-   
+	ArrayList, LinkedList, Vector, Stack
+
+LinkedList:-
+		It is uses  a Doubly Linked List pattern internally to store the elements. 
+
+the difference b/w ArrayList and LinkedList is :
+
+ArrayList uses Dynamic Array whereas LinkedList used Doubly Linked List Pattern to store data. 
+
+Whenever we delete a value from arraylist, it follows shifting of memory cells whereas linkedlist will not perform any kind of memory cells shifting. so that it is faster than arraylist when we are performing deletion operations. 
+
+		List<Data type> <object> = new LinkedList<DataType>();
+
+1.  It is also non-synchornized, so that it allows parellel processing. 
+
+Vector :- 
+
+It is also as same as ArrayList but it is synchornized. So that it will not support parellel processing. 
+		List<Data type> <object> = new Vector<DataType>();
+----------------------------
+Set Interface :- 
+
+It is as same as List Interface, but represents the unordered set of elements which doesn't allows to store duplicate values. 
+
+It has following implemented classes
+
+HashSet  :-  It allows to store values / elements in the form of Hash Table.
+	It consist of Unique values and traversing values are ramdom order. 
+
+	Set<Data Type>  <object> = new HashSet<Data Type>();
+
+LinkedHashSet	:-  It is as same as HashSet, but it maintains insertion order. 
+	Set<Data Type>  <object> = new LinkedHashSet<Data Type>();
+
+TreeSet  :-  It is also as same as HashSet, but it provides values in asending order . 
+		Set<Data Type>  <object> = new TreeSet<Data Type>();
+----------------------------------------------
+Map :- 
+It is also one of the interface in collection where it has different implementation. 
+It contains set key-value pairs. i.e.  collection of variables and it's values are storing in one unit
+
+It also uses  java.util package. 
+
+The purpose of the Map is,  to store combination of values like
+
+a.  Error No and it's Description
+b.  Student rollno and name
+c.  City Code and City Names
+
+Point's to be Map:- 
+
+1.  Keys are unique whereas  values can duplicate
+2.  It has following implemented classes
+	HashMap		:-  It won't maintain insertion order, while traversing it provides values in 				random order
+           Map<KeyData Type, ValueData Type>  <object> = new HashMap<KeyData Type, ValueData Type>();
+	LinkedHashMap	:-  It maintains insertion  order.
+      Map<KeyData Type, ValueData Type>  <object> = new LinkedHashMap<KeyData Type, ValueData Type>();
+	TreeMap		:-  It maintains key-value pairs in asending order based on Key.
+	Map<KeyData Type, ValueData Type>  <object> = new TreeMap<KeyData Type, ValueData Type>();
+
+Map having following methods :- 
+-----------
+Put() :-  it allows add key-value pair to the collection
+remove(key) :- it allows delete a key
+clear() :- to delete all keys
+containsKey() :-  to check a key existed or not. 
+containsValue() :- to check a values existed or not. 
+get(key) :-  to print value based on  Key. 
+isEmpty() :-  it checks collection is empty or not. 
+replace() :-  to change the value based on key.
+ 
+Map.Entry :-  it is a sub interface  which meant for accessing values and keys separately.
+
+it has following methods 
+
+getKey() :-  to get a key
+getValue() :- to get a value
+--------------------------
+Sorting Methods on Class Objects:- 
+
+For sorting on class objects, collections provides two interfaces called as Comparable and Comparator
+
+Comparable :- 
+This interface is used to order the objects of the user defined classes. 
+It contains only one method called as compareTo(object). It provides single sorting sequence only. 
+i.e you can sort the elements on the basis of single data member only. 
+
+compareTo(object)  
+
+it returns +ve value if first val > second val
+it returns -ve value if first val < second val
+it return 0 if both valeus are same
+
+class Classname  implements Comparable<classname>
+{
+variables
+getters and setters as well as constructors
+
+public int compareTo(classObj)
+{
+	sorting functionality
+}
+
+}
+
+Comparator :- 
+this interface is also used to sort objects of user defined classes, it will provide multiple sorting sequences. i.e. you can sort elements on the basis of any data member. 
+
+here it also provides a method compare(object1, object2)
+
+here for sorting separate classes has to create without changing of data class. 
+
+class <classnameforSorting> implements Comparator<classname>
+{
+
+public int compare(object1, object2)
+{
+	.....
+}
+}
+
