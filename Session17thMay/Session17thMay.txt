@@ -1,0 +1,56 @@
+Today's Agenda:-
+----------------
+Data Structure 
+	Stack
+	Queue
+	LinkedList
+		Single
+		Doubly
+		Circular
+	Sorting Methods
+	Searching Methods
+------------------
+Stack :- It is a linear data structure which follows a principle Last-In-First-Out.
+
+Basic Operations :-
+
+Push		:-  Adding elements
+Pop		:-  Removing Elements
+IsEmpty		:-  check if stack is empty
+IsFull		:-  check if stack is full
+Peek		:-  get top value from stack without removing
+---------------------
+Queue :-  It is also a linear data structure which follows a principle First-In-First-Out. 
+
+Basic Operations :-
+
+EnQueue		:-  Adding elements
+DeQueue		:-  Removing Elements
+IsEmpty		:-  check if stack is empty
+IsFull		:-  check if stack is full
+Peek		:-  get top value from stack without removing
+----------------------------
+LinkedList :- 
+
+It is also one of the linear data structure which includes a series of connected nodes. 
+Here Node is a combination of data and address of next node. 
+
+These are classified into 3 types
+
+1.  Single LinkedList
+2.  Doubly LinkedList
+3.  Circular LinkedList
+
+Single LinkedList :- 
+Doubly LinkedList :-
+Circular LinkedList :- it is as same as SingleLinkedList but lastnode store first node address.
+
+Sorting Methods :- 
+------------------
+1. Bubble Sorting
+2. Insertion Sorting
+3. Selection Sorting
+4. Quick Sorting
+5. Merge Sorting
+
+
