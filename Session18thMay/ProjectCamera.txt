@@ -1,0 +1,117 @@
+class UserInfo
+{
+	String username;
+	String password;
+	double walletAmt;
+
+	getters and setters
+
+	public void AddAmtToWallet()
+	{
+		add functionality
+		a. first show current balance
+		b. read amount from keybaord then add to walletAmt variable
+		c. Show total wallet amount once it is added successfully.
+	}	
+}
+
+class  Camera
+{
+	int camid;
+	String brand;
+	Stirng model;
+	float  rentperday;
+	String status;
+
+	getters and setters and if required add parameterized constructor
+}
+
+class CameraOperations
+{
+	List<Camera>  rentAcamera = new ArrayList<Camera>();
+
+	public String  AddCameras(Camera cm)
+	{
+		add the functionality of adding camera		
+		status is "Available" first time.
+	}
+
+	public List<Camera>  ShowAllCameras()
+	{
+		add the functionality
+		first sort all the camera details based camera id then return the list object
+	}
+
+	public String DeleteCamera(int camid)
+	{
+		add the funnctionality
+			if camera status is "Rented", then it should not delete
+	}
+	
+	public void RentACamera(int camid)
+	{
+		Add functionality
+			First Show List of Cameras
+			1. Check the rent per day
+			2. Check the walletamt
+			3. if wallet having suffiecient amt, then process it.
+			4. Change the status of the camera, "Rented" and minus rent amt from wallet.
+			5. if wallet not having sufficent amt, then show an error msg.
+
+		Note :  if camera status is "Rented" then it should  not be rented again
+	}
+
+}
+
+
+class CameraMain
+{
+	public static void main()
+	{
+		UserInfo  user = new UserInfo();
+		user.setUsername("admin")
+		user.setPassword("admin@123")
+		user.setWalletAmt(10000.00);
+
+		print("Enter username)
+		input username
+		print("Enter Password")
+		input password
+		if(check user details, if it is correct)
+		{
+			show main List
+				1. My Camera
+				2. Rent A Camera
+				3. View All Camera
+				4. My Wallet
+				5. Exit
+			switch(case)
+			{
+				case 1:
+					show sub list
+						1. Add Camera
+						2. Remove Camera
+						3. View Cameras
+						4. Back to Main Menu
+						Switch(case)
+						{
+							case 1: Add camera functionality
+							case 2 : remove camera
+							case 3: view all camera 
+							case 4: show main menu
+						}
+				case 2:
+					Rent a Camera Functionality
+
+				case 3:
+					View All Cameras
+				case 4:
+					My Wallet Functionality
+				case 5: 
+					Exit
+			}	
+		}
+		else
+			print("incorrect username/password")	
+	}
+}

@@ -1,0 +1,123 @@
+Today's Agenda
+---------------
+Multi-Threading
+Synchronization
+---------------
+Thread :-  It is a process/sub-process
+
+Multi Threading :-  It is a process of executing multiple threads simultaneously. 
+
+Thread is a light weight sub process, the smallest unit of processing. 
+
+Multi Tasking based operations need to done some times. Let's Say like, Gaming Programming, Animation Programming, ....
+
+Points 
+
+1.  Threads are independent, here if one thread gets any exception other threads will not stop it's 	executions.
+2.  Threads are saves lot's time of processing. 
+
+To write multi Threading Programming, following class and interface can be used
+
+1. Thread Class
+2. Runnable Interface
+
+Thread Class :-  this class having following methods and by extending this class we can acheive multi threading program. 
+
+run() :-  it is an abstract method, where thrad task can be defined. 
+
+start() :-  this method executes the thread. 
+
+sleep()  :-  this method suspends a thread for a finite period of time and when that time is completed thread continues it's task. 
+		Thread.sleep(time in milli seconds)    1000 milli seconds = 1 sec
+
+Steps :- 
+
+1.  Create a class and extend Thread class.
+2.  Define a task in run() method.
+3.  Create an object for class then execute the thread with start() method. 
+
+Runnable Interface :-  this interface having only one method run(), by implementing this interface to the class, we can also achieve multi threading program. 
+
+steps :-
+
+1.  Create a class and implements Runnable Interface. 
+2.  Define a task in run() method. 
+3.  Create an object for User Defined class, then create object for Thread class, here pass user defined class object as constrcutor parameter for the Thread class. 
+4.  Execute thread with Thread class Object and start method. 
+ 
+Thread Life Cycle :- 
+
+Here thread life cycle having 5 stages
+
+1.  New Born State
+	Once we create an object for the thread class, then it is called as NewBorn State. 
+2.  Runnable State
+	here thread are waiting for processor for an execution, i.e. making available threads to the 		processor, it has to be done by the start() method. 
+3.  Running  State
+	here any one thread will be taken by the processor then starts execution.  start of run() 			method
+4.  Blocked  State
+	here thread will be suspended for some time to get execution of another thread.
+			sleep(), suspend(), 
+5.  Termination State
+	here once thread execution is completed, the object will be deleted from memory.
+
+Naming Thread :- 
+----------------
+Ususally whenever we create a thread, for that thread a name will be allocated like thread-0, thread-1, ......here if  need we can change that name. 
+
+getName() :-   to view existing name
+setName(String) :-  to set the name of the thread
+
+Priority of Thread :- 
+---------------------
+Once thread is created, it has a priority, i.e. which thread should execute first. As multi threading
+priorties can be taken into 3 levels
+
+Max priority		:-  if thread have max,  it executes first
+Min priority		:-  if thread have min,  it executes last 
+Normal priority		:-  if thread have normal, it execute normal(it is default priority)
+
+Every priority will be specified with numeric values starts from 10 - 1. 
+Max Priority 10
+Min Priority 1
+Norm Priority 5
+
+getPriority() :- to view priority
+setPriority() :- to change the priority
+------------------------------
+Synchronization :-  
+It is the capability to control the accecss of multiple threads to any shared resource.
+
+Here threads will be executed one after another. 
+
+It is mainly used to 
+
+1.  To prevent thread inteterference
+2.  To prevent consistancy problem
+
+
+This concept is implemented in 3 ways 
+
+1.  Synchronized Method(method level sync)
+2.  Synchronized Block (block level sync)
+3.  Static Synchronization
+
+Concept of Lock:-
+-----------------
+It is built around an internal entity known as the lock or monitor. 
+Every Object has a lock associated with it. When thread execution started, locked will be placed around it, when process is completed, it automatically opens.
+
+Synchronized Method :- 
+if we are appling sync  on method then it is called as sync method. 
+
+Synchronized Block :- 
+if we are appling sync  on some part of code within the method then it is called as sync block.
+
+synchronized(object)
+{
+	code
+}
+
+Static Sync :-  
+if we are appling sync on static method then it is called as static sync.
+
