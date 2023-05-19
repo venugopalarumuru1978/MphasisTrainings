@@ -1,0 +1,40 @@
+Today's Agenda
+--------------
+Selection Sort
+Recursion
+Linear Search
+Binary Search
+Project Explanation
+-------------------
+Selection Sort
+
+This type of algorithm search for lowest element and arrange it to the proper location of an array. 
+Here We have to swap the current element with the next lowest number. 
+
+Recursion :- 
+
+A method or function calling itself again and again until the given condition is true then it  is called as Recursion/Recursive method/function.
+
+This process avoids using iteratitive statements. so that performance of the task will be faster. 
+it may be applied to sorting, searching  and traverasal techniques. 
+
+Searching methods :-  
+
+These methods are  very usefull whenever we want an element in an array. 
+
+There are two types of searching methods 
+
+1. Linear Search
+2. Binary Search
+
+Linear Search :- 
+
+this type of searching will be done in an array, take key value then check with every value of an array. if it found, tell it's position otherwise just given "not found info".
+
+It can used on an array either is array is sorted or unsorted, but performance wise, it is slower process because it has to check each and every value of an array. 
+
+Binary Search 
+
+It is also used for searching an element in array, but it has an algorithm. 
+It is better faster with linear searching but values should be in sorted order. 
+
