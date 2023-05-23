@@ -1,0 +1,92 @@
+Today's Agenda
+--------------
+JDBC(Java Database Connectivity)
+--------------
+What is  a JDBC?
+
+JDBC is a technology which meant for interacting with Databases/ It is a JAVA API(Application Programming Interface) to communicate with databases. 
+
+Generally API Provides collection of pre-defined interfaces and it's implented classes.
+
+To interact with db, jdbc api provides different ways / jdbc drivers.
+
+JDBC Driver :- it is  a software component that enables java application to interact with the db. 
+
+There are 4 drivers :- 
+
+1. JDBC:OBDC Birdge Driver
+2. Native driver/Native API Driver
+3. Network Protocal Driver
+4. Thin Driver/Thin Layer
+
+Out of these four ways, 4th Ways is working / running way remaining are out-dated for the present technologies. 
+
+Thin Layer Driver  is  flexible driver for connecting to any database other drivers having some limitations. 
+
+Steps to connect with database
+
+1. Based on Database,  connector jar file has to be downloaded and add to the application. 
+
+Jar File is a kind of executable file which consist collection classes and interfaces of specific technology. 
+
+As per JDBC :-  for every db having one connecting jar file. 
+
+Steps to add jar file to the application
+Right Click On Application -> BuildPath -> ConfigureBuildPath -> Library ->  Click on "Add External Jars" Button  ->  Browse the Jar file -> Click on "Apply and Close" Button.
+
+2.  Register Drivers 
+		To do this process "Class.forName()" method is used. 
+			Class.forName("drivername")
+				for mysql Thin Layer Driver Name is "com.mysql.cj.jdbc.Driver"
+
+			Ex:-   Class.forName("com.mysql.cj.jdbc.Driver");
+
+3.  Getting Connection to DB
+		
+Connection Interface :- This interface hold connection of specified database.
+
+DriverManager class :-  This class is having methods to get connection to specified db. 
+
+	DriverManager.getConnection("connectionString", "username", "password")
+
+ConnectionString :- It is a string where it provides connection db servername, portno and dbname
+		for mysql:- "jdbc:mysql://localhost:3306/dbname"  
+
+complete syntax :- 
+
+Connection conObj =  DriverManager.getConnection("jdbc:mysql://localhost:3306/MphasisDb", "root", "root");
+
+3. Now perform sql operations on DB from java application
+
+Statement Interface :- This statement allows to write sql queries in java program. 
+
+		Statement  <stmtObj>  =  connectionObj.createStatement();
+
+This interface having following two methods
+executeUpdate("insert/update/delete") :- this method allows to run following queries.
+
+executeQuery("select") :-  this method allows to run only select statement and returns  ResultSet class Object. 
+
+ResultSet :-  this class object allows to store result of the select stmt exeucted. 
+	ResultSet  RsObj = conObj.executeQuery("select stmt");
+
+next() :-  it checks data where ever row pointer exist, if true we can access row col values and it will forward to the next row.
+
+This class having following getter methods, these methods are used to access col values based colname and col data type.
+
+getInt(colname)
+getString(coname)
+getLong(colname)
+getFloat(colname)
+......
+
+4.  Once all the operations are done, close the connection.
+	connObj.close()
+----------------
+Create an App using JDBC with Collections for CURD Operations(Create - Update - Read - Delete)
+
+Create Table Student(rollno int auto_increment primary key, 
+stdname varchar(20), 
+course varchar(20), 
+fees float);
+-------------------------
