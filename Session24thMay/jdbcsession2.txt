@@ -1,0 +1,63 @@
+Today's Agenda
+--------------
+JDBC -  PreparedStatement Interface
+-----------------------
+The PreparedStatement interface is a subinterface of Statement. 
+It is used to execute parameterized query.
+
+Parameterized Query means, while writing sql queries, whereever values are needed in that place we can pass an arguments with a symbol '?'
+
+String inscmd = "Insert into Student(stdname, course, fees) values(?,?,?)";
+
+Here each ? represents a value and parameters maintains an index number starts from 1, .....
+
+To pass values, "PreparedStatement" interface provides some setter methods  for every data type
+setInt(index, val)
+setString(index, val)
+setFloat(index, val)
+......
+
+Syntax:- 
+
+PreparedStatement  <object>  = conObj.prepareStatement("sql query")
+
+to execute these queries 
+
+executeUpdate() -  Insert/Update/Delete
+
+executeQuery() - Select
+
+execute() -  Create/Alter/Drop
+
+Insert Command :- 
+PreparedStatement  ps  = 
+                 conObj.prepareStatement("Insert into Student(stdname, course, fees) values(?,?,?)")
+ps.setString(1, "Pavan Kumar");
+ps.setString(2, "Java");
+ps.setFloat(3, 12000.00);
+int res = ps.executeUpdate();
+
+Select stmt:- 
+PreparedStatement  ps  = conObj.prepareStatement("Select * from Student");
+ResultSet  rs = ps.executeQuery();
+
+Select stmt with an arg:- 
+PreparedStatement  ps  = conObj.prepareStatement("Select * from Student where rollno=?");
+ps.setInt(1, 101);
+ResultSet  rs = ps.executeQuery();
+------------------------
+Whenever we are developing any application, every part should be one package.
+----------------------------
+Properties :- this class holds set of keys and it's related values. 
+It is somewhat as same as Map Interface. 
+the only difference b/w properties class and map interface is
+
+Map interface can process temp values  whereas Properties class can process temp values as well as values which are stored in specific file called as properties file(i.e. file extension is "properties").
+
+Properties File:-  this file holds set of keys and it's related values
+every key-value pair should be in this format and these all should present in separate file called "filename.properties"
+key=value
+key=value
+To read content from properties file, we have class called as "Properties".
+load() :- this method loads all the keys and related values in to prop object. 
+getProperty() :-  this method get's value of specified key
