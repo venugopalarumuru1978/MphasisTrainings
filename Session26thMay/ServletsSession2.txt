@@ -1,0 +1,108 @@
+Today's Agenda:-
+----------------
+1. RequestDispatcher
+2. Session Management
+3. Cookies
+4. URL Rewriting / Query String
+5. Hidden Fields
+-----------------
+How to communicate with one page to another page(servlet - servlet/servlet - html/jsp page)
+Servlet Collaboration  is the process of communicating b/w servlet to servlet or servlet to another. 
+
+There are two ways 
+1.  SendRedirect() method 
+2.  RequestDispatcher Interface 
+
+RequestDispatcher:- 
+-------------------
+The RequestDispatcher interface provides the facility of dispatching the request to another resource it may be html, servlet or jsp. This interface can also be used to include the content of another resource also. It is one of the way of servlet collaboration.
+
+forward(ServletRequest request,ServletResponse response)throws ServletException, java.io.IOException:
+		Forwards a request from a servlet to another resource (servlet, JSP file, or HTML 			file) on the server.
+
+include(ServletRequest request,ServletResponse response)throws ServletException,java.io.IOException:
+		Includes the content of a resource (servlet, JSP page, or HTML file) in the response.
+----------------------
+There are 4 types of request methods 
+
+1.  Get Method		:-  To get something from the server(doGet())
+2.  Post Method		:-  To send / submit page to the server along with data(doPost())
+3.  Put/Patch Method	:-   To perform any modifications on the server(doPut()/doPatch())
+4.  Delete Method	:-  To perform delete on the server(doDelete())
+
+These all methods are equals to one method i.e. service() method which can handle GET/POST/PUT/DELETE
+-----------------------------
+Session :-  
+The process of sending a request to the server and whenever that request reached to the server, server will allocate memory for that client into server system, that memory is called as Session Memory. 
+
+Every Session having an SessionID which is a 16 chars alphanumerics. 
+Session memory will be deleted automatically whenever browser is closed/when we are idle time. 
+Session Allows to store any type of data and modify as well as delete. 
+Once data stored in Session, that can be access in all other pages like Servlets/jsp's.
+
+HttpSession :-  this class allows to fetch session and it has following two methods
+
+setAttribute(key, value) :-  to store values
+getAttribute(key)  :- to retrive values
+
+HttpSession  object =  request.getSession();
+--------------------------------
+URL Re-writing/Query String :-
+The process of sending any textual info from one page to another page at the time of redirecting the page, this process is called QueryString/URL Re-Writing. 
+
+1.  Source page  create variable as follows
+		response.sendRedirect("pagename?variable=value"); 
+2.  Destination page, read variable to get value
+		request.getParameter("variable")
+---------------------------------
+Hidden Fields :-  it is one of the input tag in html where we can hide the value but can be accessed in servlets / jsp. 
+ 
+Purpose : to value should not visiable and modify. 
+
+<input  type="hidden"  name="...."  value="assign a value" />
+
+it can be access in servlet with following statement
+	request.getParameter("name of hidden field")
+----------------------------------------------
+Cookies :- 
+
+It is a small piece of information that is persisted b/w the multiple client requests. 
+		Or
+It is a  small amount memory which can be resided in client side and allows to store only textual info like username, lastvisited date, time etc....
+
+A Cookie has a name and a value. Basically cookies are generated in browser memory. 
+
+As per the java, there are two types of cookies
+
+1.  In-Memory Cookie
+2.  Persistant Cookie
+
+In-Memory cookie, it delete's automatically whenever browser is closed. 
+
+Persistant cookie, It save info in client system for particular period of time, so that info can be access multiple times in application.
+
+How to Create a Cookie :- 
+
+Cookie Class :-  by using this class we can create a cookie object with key and value. 
+It has some methods 
+
+getValue() :- to get a value from cookie
+getName() :-  to get name of cookie
+setName() :-  to create a new cookie with name
+setValue() :-  to store value in cookie
+setMaxAge(time) :-  it allows to set time for cookie. 
+addCookie(cookieobj) :-  this method adds cookie info to the browser. 
+getCookies() :-  it allows to retrive all the cookies and stores in the form of an array. 
+---------------------
+Develop Student Application with Servlets:- 
+
+There are two users 
+
+Admin User:-(Username : admin  Password: admin@123)
+	a.  Add New Student
+	b.  Show All Students
+	c.  Modify and Delete Students
+Student User (username : mailid  password : XXXX)
+	a. Show only that particular studnet details
+	b. Change Password
+-------------------------------------------
