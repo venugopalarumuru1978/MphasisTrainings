@@ -1,0 +1,113 @@
+Today's Agenda
+--------------
+Many-To-One Mapping
+Many-To-Many Mapping
+Lazy Collection
+Bi-Directional Process
+---------------
+Many - To - One  :-   Multiple Vechicles can have one person. 
+Objects   Vechicles,   Person
+Many - To - Many :-   Multiple Students and Courses
+-------------------------
+4 types of mappings
+
+2 types are collection based
+A.  One-To-Many
+B.  Many-To-Many
+
+other two types are non- collection based
+A. One-To-One
+B. Many-To-One
+--------------------
+Bi-Directional Association
+
+It allows to fetch details of the dependent object from both sides, in such case we have to reference  of two classes in each other. 
+
+here One-To-One and Many-To-Many are useful for the BiDirectional Process. 
+
+Lazy Collection:-
+
+It is the process of loads the childs objects on demand while working with parent objects. 
+This process is called Lazy Collection.  It is used to improve performance of the application. 
+
+Lazy Collection is enabled by default in the versions of Hibernate 3.0 and above. 
+
+To implement lazy collection, we have to property called Lazy=True/False
+Using Annotation
+	@LazyCollection(LazyCollectionOption.TRUE)
+Using Xml
+<list  name="answers" lazy="true/false">
+	.....
+</list>
+-----------------------
+JSP: - Java Server Pages
+
+It is a web technology which meant for developing server-side web applications.
+It can be taken as an Extension  to Servlets, so that the limitations of the servlets can be overcome by using jsp. 
+
+Advantages of the JSP:- 
+
+1.  Extension To Servlet:-
+We can all the features of the servlets in jsp along with new features.
+Here in Addition, Predefined jsp tags, Implicit  Objects, Custom Tags, Expression Lang.
+
+So that a JSP Page having, html, css, javascript, jsp tags, implicit objects, ....
+
+2.  Easy to Maintain :- 
+Here we can separate business login and presentation logic, so that it is very easy to maintain, whereas in servlet, we have to write both codes in servlet page if required. 
+
+3.  Fast Development: No need to recompile
+In JSP, Once is page developed and later on if it get's modified, that no need to compile again. 
+it automatically updates that modification. 
+
+4. Less code than servlet
+When compare to servlets, jsp will finish task with less code. 
+
+JSP Page Life Cycle:- 
+---------------------
+Translation of JSP Page
+Compilation of JSP Page
+Class Loading
+Instatiation
+Intilization
+Request Processing
+Destroy
+
+
+Jsp Page is combination of Web Code(html, css, js, ..) and Java Code. 
+
+Demo.jsp   <==>  Demo.java  (servlet)
+
+Steps to create Jsp App:- 
+
+1.  Create Dynamic Web App using Eclipse.
+2.  Add the jsp pages in webapp folder.
+3.  Add servlet-api.jar and jsp-api.jar files.
+------------
+Jsp page consist of java code, to write java code we have use following scriplet tag
+<%
+	// Java Code
+%>
+
+to print any variable value/ object along with html
+
+<% =variable/object %>
+
+To import packages in JSP Page 
+
+<%@ page  import="package name" %>
+
+All the jsp tags are starts with <jsp:tagname>
+
+<jsp:include>  = to call a page within another page
+<jsp:forward>  = to forward next page. 
+-------------------------------------
+JSP provides some implicit objects, these objects directly we can use without creating an object it's related class. 
+
+PrintWriter    =   out
+HttpServletResponse = response
+HttpServletRequest  = request
+HttpSession  =  session
+PageContext  = context
+HttpApplication = application
+
