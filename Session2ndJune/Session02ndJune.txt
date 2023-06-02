@@ -1,0 +1,157 @@
+Today's Agenda
+--------------
+JSTL (Jsp Standard Tag Library)
+--------------
+
+Whenever we are developing an application, 
+Presentation 	Layer :- 
+				UI (User Interface)  Page Design
+					if page is web page:   HTML, CSS, JS, JSP....
+Business 	Layer :-   
+				Functionality of the application
+					Creating classes and method... etc.
+
+What is a JSTL?
+		It provides set of predefined tags to perform different operation on web page, 
+		this will help us to make website development fast. 
+				It also avoids using java code into jsp file. 
+
+As per JSTL,  different types are exist and these tags are located in specific url
+to work with those tags, we have to import that url as follows
+
+<%@ taglib uri="ur of the type of tags" prefix="anytext" %>
+
+Once it is added on top of the web page, tags are used as follows
+		<prefix-text:tagname  .... />
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="cr" %>
+
+<cr:if ....>
+<cr:out  ....>
+
+Note :-   we have to add jstl jar file to the application. 
+			jstl1.2.jar
+
+Core Tags :-
+
+<c:out>  is used to print any variable value/expression result
+
+<c:out  value="${'value'}" />
+
+<c:set>  is used to declare variable and assign value by default. it also provide scope of the variable. 
+
+<c:set   var ="variablename"   value="${val/expression}"  scope="session" />
+
+<c:if > is used to check conditions, based on  conditions true/false it will print results
+
+<c:if  test="<condition>">
+		print results
+</c:if>
+
+<c:redirect> is used to move from one page to another page. 
+
+<c:redirect url="site/Page name" />
+
+<c:forEach> is used to work with loop
+
+<c:forEach  var="variable"  begin="startval"  end="endvalue">
+	..........
+</c:forEach>
+
+<c:choose>, <c:when>, c:otherwise>  are used as Switch Statement 
+
+<c:choose>
+	<c:when test="condition-1">
+			.........
+	</c:when>
+	.........
+	<c:when test="condition-n">
+			.........
+	</c:when>
+	<c:otherwise>
+		default stmts
+	</c:otherwise>
+</c:choose>
+
+<c:import> is used to include one page content into another page. 
+
+<c:import var="variable>  url="page name" />
+
+---------------------------------
+Railway Crossing Status System
+
+Db Tables
+---------
+Table : userregiser
+userid    username   email   password
+--------------------------------------
+11
+12
+13
+
+
+RailwayCrossing:- 
+
+crsid   CrossingName   Address LandMark   TrainSchedule   Incharge   Status
+---------------------------------------------------------------------------
+1
+2
+3
+4
+5
+
+
+AddFav:-
+-----
+Sno   UserID     CrsId
+-----------------------
+1       12         3
+2       11         2
+----------------------
+
+
+Table : AdminInfo
+
+sno    Username     Password
+-----------------------------
+1     venu@gmail.com    12345
+2     varun@gmail.com   12345
+-----------------------------
+
+------------------------------------------------------------------------------------------------------
+Tables - Online Quiz
+------------------------------
+Table 1 : QuizCategory
+----------------------
+CatId	CategoryName
+--------------------
+1         Science
+2         Computers
+3         Java
+4         JSP
+---------------------
+Table 2 : Questions
+---------------------
+Qid	Question	Option1		Option2 	Option3         Answer     CatID
+----------------------------------------------------------------------------------------
+101      JSP               Op1            OP2             Op3             OP2       4
+----------------------------------------------------------------------------------------
+Table 3:  UserRegister
+----------------------
+UserID	 PersonName     PhoneNumber     Email     Password
+-----------------------------------------------------------
+121        abc                           abc@g        1234
+----------------------------------------------------------
+Table 4 : Score
+----------------
+Sno     UserID       CatID     Score
+------------------------------------
+1         121          4        "8/10" 
+---------------------------
+Table 5 :  Quiz
+---------------------------
+Sno     QuizTitle       CatID
+----------------------------
+1       ScineQuiz        1
+2       JavaQuiz         3
+---------------------------
