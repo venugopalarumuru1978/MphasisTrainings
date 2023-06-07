@@ -1,0 +1,86 @@
+Today's Agenda
+--------------
+Spring JDBC
+Spring Web MVC
+--------------
+Spring JDBC:- 
+
+JDBC:- 
+	1.  Loading Drivers
+	2.  Making Connection
+	3.  Preparing and Executing SQL Queries
+	4.  Exceptions has to be handled explicitly. 
+
+In Normal JDBC, whenever we are executing an SQL Statement, everytime it will check loading drivers and checking db connection. 
+
+Spring JDBC:- 
+	1.  Loading Drivers and Making Connection will be done only once while loading an application.
+	2.  Preparing and Executing SQL Queries won't check db connections a drivers everytime. 
+	3.  No need maintains any exception handling explicitly. 
+
+
+JdbcTemplate  :-  This class is used to execute sql queries.
+			JdbcTemplate  <object> = new JdbcTemplate(dataSourceObj);
+
+For DML queries(Insert/Update/Delete)
+1. public int update(sql query string)
+		jdbctemplateObj.update(sql query, [parameters]);
+				here parameters always has to be taken in form of array of Object.
+Insert into student values(?,?,?);
+
+2. public List query(select stmt) = for multiple rows
+
+
+Here "DataSource" class is used to making connection to database. Here as per Spring FW, db connection info has to be specified in config.xml file.
+
+For Spring JDBC Application :-
+------------------------------
+1.  Create an Spring Application
+2.  Add following dependencies
+	spring-core
+	spring-context
+	spring-jdbc
+	mysqlconnector
+
+3.  Add xml configuration file, then add following code
+======================================================================================================
+Spring Web MVC :- 
+
+It is one kind of architecture which allows to develop web applications by using Spring Framework. 
+
+What is an MVC ? 
+
+It is a Model View Controller, it is an architecture used to develop applications. It is mainly used to overcome the limitations of the traditional application development process. 
+
+For Any Application Development, there are 3 layers
+
+1.  Presentation Layer
+			It is meant for UI(user interface). 
+			If the app is web app:  HTML, CSS, JS, ...is used to create UI
+2.  Business Layer
+			It is meant for Developing Functionality of the application.
+			here we required a programming language, JAVA/Spring FW	
+3.  Data / Data Access Layer
+			It is meant for Database
+			MySQL / SQL Server / Oracle / ....
+
+here there are few limitations
+	1.  At a time multiple people cannot work on multiple layers.
+	2.  Development process will be slow
+
+MVC will give solution for this limitations
+
+MVC 
+
+M - Model  => Data Access Layer
+V - View   => Presentation Layer
+C - Controller =>  Business Layer
+
+Here mvc  will work all layer independently and finally all layers are integrated as an application. 
+---
+For Any Web Page, there are 4 request methods are existed. 
+
+GET  :-  to retrive somethign from server
+POST :-  to send something to the server along with page. 
+PUT
+DELETE
