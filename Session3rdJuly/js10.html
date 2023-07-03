@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+<h1>JavaScript - CheckBox Example</h1>
+    <hr />
+<form name="frm1">
+<p style="text-align: center;">
+    <input type="text"  name="txtPname"  placeholder="Enter Ur Name" />
+    <br /><br />
+    <span>Hobbies</span><br />
+    <input type="checkbox"  name="chk1"  value="gr" />Gardening
+    <input type="checkbox"  name="chk2"  value="bk" />Book Reading
+    <input type="checkbox"  name="chk3"  value="cs" />Playing Chess
+    <br /><br />
+    <input type="button"  value="Click Me"  onclick="checkExample()" />
+    <br /> <br />
+    <span style="text-align: center;" id="result"></span>
+</p>
+</form>
+    <script type="text/javascript">
+
+        function checkExample()
+        {
+        var  chkresult = frm1.txtPname.value;
+        if(chkresult!="")
+        {
+            if(frm1.chk1.checked==false && frm1.chk2.checked==false && frm1.chk2.checked==false)
+            {
+                alert("Please select anyone hobby");
+            }
+            else
+            {
+            chkresult = chkresult + " having hobbies ";
+            if(frm1.chk1.checked==true)
+            {
+                chkresult += "Gardening<br />";
+            }
+
+            if(frm1.chk2.checked==true)
+            {
+                chkresult += "Reading Bookes<br />";
+            }
+
+            if(frm1.chk3.checked==true)
+            {
+                chkresult += "Playing Chess<br />";
+            }
+            document.getElementById("result").innerHTML = chkresult;
+        }
+        }
+        else
+            alert("Please enter your name ");
+        }
+        </script>
+</body>
+</html>

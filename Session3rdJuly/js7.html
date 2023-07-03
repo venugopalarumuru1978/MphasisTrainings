@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+<h1>JavaScript - Radio Button  Example</h1>
+    <hr />
+<form name="frm1">
+<p style="text-align: center;">
+ 
+    <input type="radio"  name="rdoBank"  value="CC" onchange="rdoBanks()" />Credit Card
+    <input type="radio"  name="rdoBank"  value="DC" onchange="rdoBanks()" />Debit Card
+    <input type="radio"  name="rdoBank"  value="NB" onchange="rdoBanks()" />Net Banking
+    
+    <br /> <br />
+    <span style="text-align: center;" id="result"></span>
+</p>
+</form>
+    <script type="text/javascript">
+        
+        function rdoBanks()
+        {
+            var b = frm1.rdoBank.value;
+            if(b=="CC")
+                document.getElementById("result").innerHTML = "Your Payment is : Credit Card";
+            if(b=="DC")
+                document.getElementById("result").innerHTML = "Your Payment is : Debit Card";
+            if(b=="NB")
+                document.getElementById("result").innerHTML = "Your Payment is : Net Banking";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+<h1>JavaScript - Login Validation Example</h1>
+    <hr />
+<form name="frm1" method="POST" onsubmit="return LoginValidation()"  action="js10.html">
+<p style="text-align: center;">
+    <input type="text"  name="txtUser"  placeholder="Enter Username" />
+    <br /><br />
+    <input type="text"  name="txtPass"  placeholder="Enter Password" />
+    <br /><br />
+    <input type="submit"  value="Login Here"   />
+    &nbsp;&nbsp;&nbsp;
+    <input type="reset"  value="Clear"   />
+    <br /> <br />
+    <span style="text-align: center;" id="result"></span>
+</p>
+</form>
+    <script type="text/javascript">
+       
+       function LoginValidation()
+       {
+            var user = frm1.txtUser.value;
+            var pass = frm1.txtPass.value;
+            //alert(user + "  " + pass);
+            if(user=="" && pass=="")
+            { 
+                alert("Please enter username / passwrod");
+                return false;
+            } 
+
+            if(user=="")
+            { 
+                alert("Please enter username");
+                return false;
+            } 
+
+            if(pass=="")
+            { 
+                alert("Please enter password");
+                return false;
+            } 
+
+            if(user=="venugopal" && pass=="123456")
+            { 
+                return true;
+            } 
+            else
+            {
+                alert("Please check username/password");
+                return false;
+            }
+       }
+    
+    </script>
+</body>
+</html>

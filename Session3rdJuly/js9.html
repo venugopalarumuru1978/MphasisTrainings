@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body onload="loadDropDownOptions()">
+
+<h1>JavaScript - Dropdownlist  Example</h1>
+    <hr />
+<form name="frm1">
+<p style="text-align: center;">
+ 
+    <select name="ddlDay" id="ddlDay"></select>
+    <select name="ddlMonth" id="ddlMonth"></select>
+    <select name="ddlYear" id="ddlYear"></select>
+    
+    <input type="button"  value="Click Me" onclick="getDateValue()" />
+
+    <br /> <br />
+    <span style="text-align: center;" id="result"></span>
+</p>
+</form>
+    <script type="text/javascript">
+       
+       function loadDropDownOptions()
+       {
+            var days = "<option value='-1'>Day</option>";
+            for(let i=1;i<=31;i++)
+            {
+                days = days + "<option value='" + i + "'>" + i + "</option>";
+            }
+            document.getElementById("ddlDay").innerHTML = days;
+            
+            const d = new Date();
+            let year = d.getFullYear();
+            console.log(year);
+
+            var years =  "<option value='-3'>Year</option>";
+            for(let i=1980;i<=year;i++)
+            {
+                years = years + "<option value='" + i + "'>" + i + "</option>";
+            }
+            document.getElementById("ddlYear").innerHTML = years;
+
+            var monthnames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        
+            var Mnths =  "<option value='-2'>Month</option>";
+            for(let i=0;i<monthnames.length;i++)
+            {
+                Mnths = Mnths + "<option value='" + monthnames[i] + "'>" + monthnames[i] + "</option>";
+            }
+            document.getElementById("ddlMonth").innerHTML = Mnths;
+       }
+       
+       function  getDateValue()
+       {
+            var d = frm1.ddlDay.value;
+
+            if(d!="-1")
+            {
+                var m = frm1.ddlMonth.value;
+                if(m!="-2")
+                {
+                    var y = frm1.ddlYear.value;
+                    if(y!="-3")
+                    {
+                        var res = d + " - " + m + " - " + y;
+                        document.getElementById("result").innerHTML = res;
+                    }
+                    else
+                        alert("Please select year");
+                }
+                else
+                    alert("Please select month");
+            }
+            else
+                alert("Please select date")
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+<h1>JavaScript - Dropdownlist  Example</h1>
+    <hr />
+<form name="frm1">
+<p style="text-align: center;">
+ 
+    <select name="ddlCity"  onchange="ddlCityFun()">
+        <option value="-1">Select City</option>
+        <option value="Hyderabad">Hyderbad</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Pune">Pune</option>
+        <option value="Kolkatta">Kolkatta</option>
+    </select>
+    <br /> <br />
+    <span style="text-align: center;" id="result"></span>
+</p>
+</form>
+    <script type="text/javascript">
+        
+        function ddlCityFun()
+        {
+            var ct = frm1.ddlCity.value;
+
+            if(ct!="-1")
+                document.getElementById("result").innerHTML = "Ur City is : " + ct;
+            else
+            {
+                document.getElementById("result").innerHTML = "";
+                alert("Please select city");
+            }
+        }
+    </script>
+</body>
+</html>

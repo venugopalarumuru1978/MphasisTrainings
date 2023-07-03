@@ -1,0 +1,116 @@
+Today's Agenda
+--------------
+1. JavaScript
+--------------
+What is meant by Scripting?
+		Programming with Web Page is called as Scripting. 
+Purpose of the scripting?
+	To make web page dynamic pages.
+
+There are different types of Scripts are existed. 
+	1.  ECMA Script
+	2.  VB Script
+	3.  JavaScript
+	4.  jQuery (Modified Version of JavaScript)
+
+from all the scripts, javascript is a browser independent script language. 
+
+What is a JavaScript?
+	It is a loosely typed scripting language for creating dynamic webpages. 
+
+Here no data types are existed to declare variables in javascript, so that it is called as loosely typed language. Most of the time we can use javascript for validating web page inputs. 
+
+To write scripting, we have to use following tag within the html page. 
+
+<script  type="text/javascript">
+	script code...
+</script>
+
+this tag can be placed either within the <head> tag / at  the end of <body> tag.
+ 
+Output Statement:-
+	console.log("stmt"/variable);   ==> to print output on browser console.
+
+	document.write("stmt"/variable);  ==>  to print output on browser.
+
+Variable:- 
+
+To declare variables in javascript, 
+
+	var / let  <variablename> = <value>;
+
+To declare constant variables 
+	
+	const  <variablename> = <value>;
+---------------------------------------------
+How to create a user defined function in javascript?
+
+function defintion:-
+-------------------
+function  <function_name>([arg...])
+{
+	.....
+	body of the function
+	.....
+	return [<expression>/<value>];
+}
+
+function calling :-  it is meant for executing a function
+	function_name([arg...]);
+
+
+the variables declared within the function is called as "local  variables", these variables can not access outside of the function.
+
+the variables declared within the script tag i.e.  outside of the all the functions, then those variables called as global variables. these variables are used in all the functions of the web page.
+
+the variables declared within the loop/any other control statment, those variables scope is within that block and those are cannot use outside of that block.
+---------------------------------
+Basically javascript is a even driven based programming, so that while working with  tools like button, textbox, radiobutton, ...., we have to use some of the properties called as  "events". 
+these are different based on specific tool. 
+
+button  =  onclick
+radionbutton, dropdownlist = onchange
+body    =  onload (it will execute a script method whenever page is loading)
+
+
+To fetch value from any input tool like  textbox, radiobutton, checkbox, dropdownlist, ... there are two ways
+
+1.  with name property 
+		formname.toolname.value
+	Note: -  here formname is must. i.e. we have to create form first, within the form tool should 			exist.
+2.  with id property
+		document.getElementById("idname").value
+----------------------------------
+There are 4 ways to get value from any element/input
+
+	getElementById() :-  with id prop
+	getElementsByName() :-  with name prop
+	getElementsByClassName() :-  with css class name
+	getElementsByTagName() :-  with tag name
+
+document.getElementById("idname")  is having two properties 
+
+innerText :-  it allows only text to be shown.
+innerHTML :-  it allows text with html tags also.
+
+Conversion Functions:- 
+
+parseInt() :-  it is used to convert string value into integer.
+parseFloat() :- it is used to convert string value into float type. 
+
+--------------------
+Array :- 
+
+var arrayname = ["val1", "val2", .....]  =  with initilization
+var arrayname = []; with dynamic process. i.e. values can be added dynamically.
+
+
+
+
+
+
+
+
+
+
+

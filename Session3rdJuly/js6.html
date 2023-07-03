@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+<h1>JavaScript - Button - TextBox Example</h1>
+    <hr />
+<form name="frm1">
+<p style="text-align: center;">
+    <input type="text"  name="txtVal1"  placeholder="Enter Value-1" />
+    <br /><br />
+    <input type="text"  name="txtVal2"  placeholder="Enter Value-2" />
+    <br /><br />
+    <input type="button"  value="Addition"  onclick="txtCal()" />
+    &nbsp;&nbsp;&nbsp;
+    <input type="button"  value="Clear"  onclick="ClearTools()" />
+    <br /> <br />
+    <span style="text-align: center;" id="result"></span>
+</p>
+</form>
+    <script type="text/javascript">
+        
+        function txtCal()
+        {
+            var x = parseFloat(frm1.txtVal1.value);
+            var y = parseFloat(frm1.txtVal2.value);
+
+            var add = x+y;
+
+            document.getElementById("result").innerHTML = "Addition : " + add;
+        }
+
+        function ClearTools()
+        {
+            frm1.txtVal1.value = "";
+            frm1.txtVal2.value = "";
+            document.getElementById("result").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
