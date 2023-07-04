@@ -1,0 +1,227 @@
+Today's Agenda
+--------------
+TypeScript
+--------------
+What is an TypeScript?
+
+It is a programming language, which is developed based on JavaScript.
+
+It is a superset of javascript, which adds following features
+
+1.  Data Types
+2.  Oops Concepts
+3.  Arrow Functions
+4.  String Interpolation
+5.  Multiline Strings
+6.  Modules
+
+Advantages :-
+
+Static Typing and Type Safety
+	Static Typing :- 
+		Whenever we can fix a data type for a variable while declaring of variable and we 		can't change its data type througthout the program, then it is said to be as "Static typing".
+		or
+	If we declare variable with specific data type then it is also called as "Static Typing".
+			ex:-  C, C++, Java, ....
+	
+	Dynamic Typing :- 
+		if we declare variables without data type, then it is called as Dynamic Typing
+			Ex:-  JavaScript, Python
+
+
+	Type Safety :-  if we specify data type while declaring the variable and when we assgin wrong
+			type of value into a variable, then compiler shown error. 
+
+			TypeScript supports both static and dynamic.
+
+
+Here Typescript provides an intellisence so that if any wrong code has been done, errors will be shown.
+
+
+What is an NPM?
+	It is a node package manager installer, It is the world largest software library. it is also a Software Package Manager and Installer. It consist nearly 8Lakhs packages within it. 
+
+NPM is a Open - Source and developers can use it freely. This NPM comes with NodeJS software. 
+So that download and install NodeJS to get NPM. 
+
+What is a CLI?
+	It is a Command Line Client which includes in  NPM. Here cli provides some collection of commands to download and install required softwares. 
+
+To download NPM/NodeJS, goto http://nodejs.org then download and install it. 
+
+
+Steps to install typescript software
+
+1.  Install Node JS software
+2.  Install typescript after completion of NodeJS installation
+
+	goto command prompt then use following command 
+		npm install typescript -g  // installing typescript
+----------------------
+Steps to write TypeScript Program?
+
+1.  Open any text editor(VSCode) then code it as per the requirement. 
+2.  Save that program with .ts extension
+3.  Compile that program with following command
+		tsc  "Filename.ts"
+	Once program is compiled successfully, it will generate a javascript file, that file can be 	executed as follows
+		node  "filename.js"  // for an execute
+
+
+Data Types :- 
+	a. number :-  for numeric(integer/float) values
+	b. string :-  for string values 
+	c. boolean :- for true/false
+	d. any     :- for any type of value
+
+		var  <variablename> : <data type> = <value>;
+---------------------------------------------------
+Object Oriented Programming using TypeScript:-
+
+Object, Class, Abstraction, Encapsulation, Inheritance, Polymarphisum
+
+Object :-  It represents physical item, that represent a person or thing
+
+It is also called collection of attributes(details) and methods(manipulations)
+
+Syntax :-
+
+var  ObjectName = {
+
+	property_Name:value,
+	property_Name:value,
+	......
+
+	methodname : function()
+	{
+		body of the function
+	}
+};
+
+Once objet is created, properties and methods can be access as follows
+Objectname.property / methodname()
+-----
+class :-  
+It is  representing model of the object, which defines list of properties and methods of an object.
+
+
+class  <classname>
+{
+	property:data type = value;
+	
+	methodname([arg]): return type
+	{
+		body of the method
+	}
+}
+
+
+Once class is defined, for that class Object will created as follows
+	var <Object name> = new <classname>([arg]);
+With the help of object class members are accessed. 
+		Object.member
+
+Typescript also having access modifier:  private, public, protected
+-----------------
+Constructor :- 
+It is a special method of the class which meant for specifying action for the object. 
+i.e. initialing properties of the class at the time of object creation. 
+by using "constructor" keyword we can create constructor
+syntax:-
+
+constructor([arg])
+{
+	body of the constructor
+} 
+
+it will be executed whenever object is created
+it can take parameters
+---------------------------
+Inheritance :-  it is the process of getting the features from parent to applying to the child item.
+
+with the help of "extends" keyword, we can achieve inheritance. here it also supports following types of inheritances
+
+class  <child classname>  extends <parent classname>
+{
+	....
+}
+
+1.  Single Inheritance
+2.  Multi Level Inheritance
+3.  Multiple Inheritance
+4.  Hirarchical Inheritance
+5.  Hybrid Inheritance
+
+here multiple inheritance cannot be supported, so that it can be achieved with the help of "interface"
+
+syntax of the interface :- 
+
+interface  <interfacename>
+{
+	property declaration
+	method declaration
+}
+
+with the help of "implements" keyword, we can inherit interface to the class
+
+class <classname>  implments <interfacename>
+{
+.....
+}
+
+Note:- Polymarphisum cannot be implmented using typescript.
+-----------------------
+Enumerations
+
+	It is a colletion of constants grouping under one unit. 
+	It acts as one of the user defined data type.
+	Once it is created, it can be assigned to a variable or a property. 
+		PropertyName:enumeration_name;
+
+	enum  <name of enumeration>
+	{
+		const1, const2, ....
+	}
+
+
+	1.  to assign value to property
+		this.propname = enumerationname.value;  here only index number will be assigned
+	2.  to print value
+		enumerationname[this.propname];
+-----------------
+Modules :-
+
+A module is an typescript class file(s), where it allows to export from one program to another program
+
+Purpose of this conceptis export one class into another class within the application. 
+
+while creating a class, we have to use "export" keyword for class creation. 
+
+export class <classname>
+{
+	body of the class
+}
+
+whereever using this class, we have to import that class as follows
+
+import {classname, ...}  from "./filename";
+class <classname>
+{
+	....
+}
+
+to represent
+-----
+"./"  will represent currently working folder
+"./subfolder/filename" will represent sub folder of the currently working folder
+"../foldername"  will re-present  parent folder/previous folder. 
+--------------------------------------------------------------------------------------
+JSON :-  
+
+What is the purpose of the using JSON?
+
+Tranporting data b/w applications. 
+JSON formated data is global formated data, i.e. if any data present in the form of json, that can be transport to any application and in that application it can be very easly convert into it's navtive format. 
+
+JsonObj =  {key1:value1, key2:value2, .....}
+to get a value : JsonObj.key1

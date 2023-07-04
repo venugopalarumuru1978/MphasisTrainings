@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Student Info - JSON</h1>
+    <ol type="I"  id="res"></ol>
+<hr />
+
+<p id="res1"></p>
+
+    <script type="text/javascript">
+        function jsonFun()
+        {
+            stdObj = {"rno":1001, "sname":"Pavan", "course":"Java", "fees":12000.00};
+            
+            console.log("Student Roll Number : " + stdObj.rno);
+            console.log("Student Name : " + stdObj.sname);
+            console.log("Student Course : " + stdObj.course);
+            console.log("Course Fees : " + stdObj.fees);
+            
+            var result = "";
+            result += "<li>Student Roll Number : " + stdObj.rno + "</li>";
+            result += "<li>Student Name : " + stdObj.sname + "</li>";
+            result += "<li>Student Course : " + stdObj.course + "</li>";
+            result += "<li>Course Fees : " + stdObj.fees + "</li>";
+
+            document.getElementById("res").innerHTML = result;
+        }
+
+
+        function jsonArrayFun()
+        {
+            stdObj =[ 
+                {"rno":1001, "sname":"Pavan-1", "course":"Java", "fees":12000.00},
+                {"rno":1002, "sname":"Pavan-2", "course":"Java", "fees":12000.00},
+                {"rno":1003, "sname":"Pavan-3", "course":"Java", "fees":12000.00},
+                {"rno":1004, "sname":"Pavan-4", "course":"Java", "fees":12000.00},
+                {"rno":1005, "sname":"Pavan-5", "course":"Java", "fees":12000.00}
+            ];
+
+            console.log(stdObj);
+            var resinfo = "";
+            for(let i=0;i<stdObj.length;i++)
+            {
+                resinfo += "<ul type='circle'>";
+                resinfo += "<li>" +  stdObj[i].rno + "</li>";
+                resinfo += "<li>" +  stdObj[i].sname + "</li>";
+                resinfo += "<li>" +  stdObj[i].course + "</li>";
+                resinfo += "<li>" +  stdObj[i].fees + "</li>";
+                resinfo += "</ul><hr />";
+            }
+
+            document.getElementById("res1").innerHTML = resinfo;
+        }
+
+        jsonFun();
+        jsonArrayFun();
+
+    </script>
+</body>
+</html>
