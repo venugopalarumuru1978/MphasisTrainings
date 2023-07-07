@@ -1,0 +1,150 @@
+Today's Agenda
+--------------
+	Angular
+--------------
+What is an Angular?
+
+Angular is a client side framework to develop / create web applications.
+This framework provides skeletion of the application whenever we create an application.
+
+The purpose / feature of the angular is to create Single Page Applications(SPA Web Applications). 
+
+Angular can be used in combination with any other programming languages(Server Side Platforms) like java, dotnet, php, python etc.
+
+Angular is a Cross-Platform, i.e. it works on any operating system. 
+
+Angular is a cross-browser compitable, i.e. it works on any browers.
+
+Angular is mainly used to create "data-bindings" i.e. we can establish relation b/w a variable and an html element, when the value of the variable is changed, the same will be automatically reflected on html element and vice versa. 
+
+Angular is developed based on  using "TypeScript". 
+-----
+Goals of the Angular:- 
+----------------------
+Separation of DOM manipulation from the application logic
+Separation of HTML logic from application logic. 
+
+Makeing SPA based Applications. Single Page Application.
+-------------
+How to install angular software
+
+
+1.  Install Node JS for NPM
+2.  Install  TypeScript 
+3.  Now Install Angular with following command
+		npm install @angular/cli -g
+
+Here CLI provides collection commands  to work with angular.
+
+1.  How  to create a Angular Application
+	ng new <application name>
+2.  How to execute an Angular Application 
+	ng serve
+
+Note :-  Angular itself maintains a localhost server with port number 4200. 
+so that once application started,  
+
+goto the browser, then use following url to open a site. 
+	http://localhost:4200/
+---------------------------
+What is a Component?
+
+	The component class represents certain section of the web page. It is the main element of the angular application, if we want's to create any new page, then we have to create an component. 
+Every component includes following files
+	1. Html File		:-  Design the page
+	2. CSS  File		:-  creating css classes 
+	3. TS   File		:-  for typescript code
+	4. Spec.ts File		:-  for testing 
+
+	ng  generate  component  <component name>
+			or
+	ng  g  component  <component name>
+
+Once a component has been created, that has to be called within the "AppComponent" / any other component if requried with the help of "Selector". 
+
+You can find selector in ".ts" file of the component. The selector has to be used as follows
+			<selector>
+			</selector>
+------------------
+Data Bindings :-
+
+The "data binding" is the relation b/w component(ts file) and the template(html file). 
+
+Here the value of the component is changed then automatically template value also changes. 
+
+there are 4 types of data bindings 
+1.  Interpolation Binding
+2.  Property Binding
+3.  Event Binding
+4.  Two-Way Binding
+
+Interpolation Binding :- 
+It shows the value of the script variable into html page(template)
+syntax :-  {{variable name}}
+
+Property Binding :- 
+It is used to send data to the template from component for a particular tool. 
+<tag  [attribute]= "property/script variable" />
+
+Event Binding :- 
+It is used to pass an event notifications from template to component. 
+<tag  (event)="methodname()" />
+
+Two-Way Binding :-
+
+It is a combination  of both "property binding" and "event binding". 
+here whenever we change value in script variable, it automatically changes value in html element and vice versa.
+
+"ngModel" has to used to work with two - way binding and we have to import a package in "app.module.ts". the package name is "FormsModule". 
+
+<tag [(ngModel)]="property" />
+----------------------------
+Directives :- 
+
+These are different types of keywords of angular which can be used in template(html page) only for different purposes. 
+
+ngModel
+ngClass
+ngIf
+ngSwitch
+ngFor
+
+ngClass :-  it is used to set css class dynamically. 
+<tag  [ngClass]="component property">
+</tag>
+
+
+ngIf :- it is meant for checking condition on template. 
+
+<tag  *ngIf="condition">
+
+</tag>
+
+ngIf-else
+
+<tag  *ngIf="condition; then template1; else template2">
+</tag>
+
+here templates are the containers, these containers are created with "ng-template" tag
+
+<ng-template #templatename>
+
+</ng>
+
+ngSwitch:- 
+
+<tag  [ngSwitch]="property">
+	<tag *ngSwitchCase=" 'value-1' "/>
+	<tag *ngSwitchCase=" 'value-2' "/>
+		....
+	<tag *ngSwitchCase=" 'value-n' "/>
+	<tag *ngSwitchDefault />
+</tag>
+
+ngFor :- 
+
+<tag *ngFor="let variable of arrayname">
+</tag>
+
+How to create a class?
+	ng g class <classname>
