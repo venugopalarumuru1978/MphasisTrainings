@@ -1,0 +1,132 @@
+Today's Agenda:- 
+---------------
+1. Forms and Validations
+2. Services
+3. Pipes
+----------------
+Forms & Validations:- 
+As per angular, there are two types of forms 
+
+1. Template Driven Forms
+2. Reactive Driven Forms
+
+Template Driven Forms :- 
+these  forms normal forms regularly creating using html, for that form by using anuglar we can apply validations. 
+
+this type of forms are useful whenever creating simple forms like Login, Feedback, Contact .....
+
+to create any type of forms first we have import "FormsModule". 
+
+------------------------
+
+Reactive Driven Forms :- 
+
+These forms are newly added forms into angular. here form creation will be done in typescript file later html control created. 
+
+1.  Import a Module called as "ReactiveFormsModule"
+2.  To represent each field  user has to use following classes 
+		FormControl, FormGroup is used to hold group of controls. 
+3.  To specify validations, use "Validators" class
+
+----------------------------
+For Validation purpose for Both Template & Reactive Driven Forms:-
+
+touched 
+	true  :  field focused
+	false :  field not focused
+
+untouched 
+	true  :  field not focused
+	false :  field  focused
+
+pristine 
+	true  :  field not modified by the user
+	false :  field modified  by the user
+
+valid 
+	true :  field value is valid
+	false:  field value not valid
+
+invalid 
+	true :  field value not valid
+	false:  field value  valid
+
+^[0-9]*$ = Only Numbers
+^[a-zA-Z]*$ = only alphabets
+------------------
+ng add  @ng-bootstrap/ng-bootstrap  :-  it will install bootstrap to the working application.
+--------------------------------------------------
+Services :- 
+The service is a class which contains reusable code(business logic, validations, calculations) etc.
+which can be called in one or more components. so that basically service exist of reusable properties and methods. 
+
+ng g service <service name>
+
+To create any indiviusal typescript class in angular application
+
+ng g class <classname>
+-------------------------------------------------------
+JSON Server :- 
+
+JSON Server is used to create an REST API's in local system. 
+Steps :- 
+
+1.  Install JSON Server in your local system.
+	npm install -g json-server
+
+2.  Create a db file for json server data.  filename must be "db.json" and keep data in the form json 		format.
+3.  to work with that data, we have to start that server
+	json-server  db.json
+4.  Once server is started, then goto web browser then use following url
+		http://localhost:3000
+----------------------------
+Pipes :- 
+
+Pipes are used to transform data as per the user requrested format. 
+	there are couple of keywords provided by angular to use in Pipes
+
+1. uppercase
+2. lowercase
+3. slice
+4. number
+5. percent
+6. date
+7. json
+8. currency
+
+syntax :- 
+	{{ property | pipename }}
+--------------------
+reference url : 
+https://medium.com/@devmrin/create-a-rest-api-json-server-in-less-than-1-minute-acf286600f03
+-------------------
+HttpClient :- this class is used to call the REST API's (POST/GET/PUT/DELETE).
+
+POST :- Adding new Data
+GET :- Retriving Data Retriving Server
+Delete :-  delete data into table 
+PUT = Modify data
+---------------------
+https://www.concretepage.com/angular-2/angular-2-4-pattern-validation-example#ngModel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
