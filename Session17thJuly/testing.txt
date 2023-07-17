@@ -1,0 +1,83 @@
+Today's Agenda
+--------------
+1. Testing
+2. Selenium
+-------------
+What is a Testing?
+
+Software testing a method to check weather the actual software product matches expected requirements and to ensure that  software is bug free. 
+
+Software Development Life Cycle, there are 3 stages
+
+1.  Development
+2.  Testing
+3.  Deployment
+
+Whenever an application comes for the testing, 
+it need to be tested following things
+	1.  Weather client requirements are matching or not.
+	2.  Finding Bugs 
+	3.  Performance of the application
+
+
+To Test an application, there are two ways
+
+1. Manual Testing
+	In this type of testing, there some rules are exist, by following those rules the tester 
+	has to test the application and prepares bug report in excel sheet if any  bugs finds, that 
+	bug report will be sent development.
+2. Automation
+	In this type of testing, there are some tools are exist, by using those tools we automatize 	testing any application.
+	
+	QTP(Quick Test Process) :- it is used to test any type of application
+			(Desktop GUI based application, Web Application)
+	Selenium :-  It is meant for only testing web applications. 
+----------------------------------
+Different Types of testings 
+
+1.  Unit Testing
+2.  Integration Testing
+3.  Smoke Testing
+4.  White Box Testing
+5.  Black Box Testing
+-----------------------------------
+What is an Selenium?
+It is free(open source) automated testing framework used to validate webapplication across different browsers and platforms. We can use this framework on multiple programming languages like Java, C#, Python, etc for selenium scripts. 
+
+Software Requirements to work with Selenium:-
+
+1.  Java
+2.  Any IDE(Eclipse)
+3.  Browser
+4.  Selenium Software
+
+Selenium Tool Suite
+
+1.  Selenium  IDE	:-  
+		Purpose of the IDE is to record selenium script and can play whenever is needed.
+2.  Selenium  RC(Remote Control):-
+		Testing process will be done with the help of Client Server Enviornment, Now a days it 		is out-dated.
+3.  Selenium Web Driver	:- 
+		It is the actual software to write selenium coding.
+4.  Selenium Grid :-  
+		With the help of Grid, we can test multiple applications at a time. 
+--------------------
+
+To Write Selenium Program, First we need to identify first web elements in following ways
+ID		:-  It allows to identify, an html element with ID Prop.
+Name		:-  It allows to identify, an html element with Name Prop.
+ClassName
+LinkText
+PartialLinkText
+TagName
+CSSSelector
+XPath
+
+
+
+
+
+
+
+
+ 
