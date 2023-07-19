@@ -1,0 +1,96 @@
+Today's Agenda
+--------------
+TestNG
+--------------
+1. Writing TestCases
+2. Configuraing XML File for the Test Cases
+3. Assertions
+4. Annotations
+---------------
+Points to remember:-
+
+1.  Every Test Method return type is "void".
+2.  Every Test method preceded with @Test Annotation.
+3.  By Default the order of the test methods execution is "Alphabetic Order".
+--------------------------------------
+
+Class A : TC-A, TC-B, TC-C
+Class B : TC-D, TC-E, TC-F, TC-G
+Class C : TC-H, TC-I, TC-J
+
+Here need execute specific Test Cases from different classes
+		TC-A,  TC-D, TC-I
+
+Configuraing XML File for the Test Cases
+----------------------------------------
+What is testng xml?
+	It is an xml file which holds set of test cases for an execution.
+What is the need of testng xml?
+	It is needed whenever testcases are in multiple classes and  from those test cases specific 	multiple test cases to be executed.
+How to create an testng xml file?
+
+How to add test cases into xml file?
+	Create an XML File
+
+	<suite>
+		<test name="testname">
+			<classes>
+				<class name="java classname">
+					<methods>
+						<include name="methodname" />
+					</methods>
+				</class>
+			</classes>
+		</test>
+
+		........
+	</suite>
+How to execute test cases from xml file?
+		right click on xml file = Run As - TestNG Suite
+-----------------------------------------------------------
+Assertions:-
+
+What is meant by an Assertion?
+TestNG asserts the tester decides whether the test was successful or not, along with the exceptions. Assertions in TestNG are a way to verify that the expected result and the actual result matched or not.
+
+How to Use Assertion?
+TestNG Provides colletion of Assert methods which from Assert class. 
+
+Assert.methodname(...)
+assertEquals()  :-  it checks weather expected and actual results both are same or not. 
+				if it same, test method is passed if not, not passed
+assertNotEquals()  :-  it opposite to AssertEquals()
+assertTrue("condition", "message") // this will execute when codntion is true	
+assertFalse("condition", "message")  // this willexecute when condition is false
+assertNul()
+assertNotNull()
+
+What is a HardAssertion?
+	It is an Assertion which throws the exception immediately upon failure of assertion. 
+		For hard assertion  "Assert" class is used.
+What is a SoftAssertion?
+	It is an Assertion which won't an an exception immediately, once all the assertions are executed, finally it gives failure assertion  info.
+		for Soft Assertion "SoftAssert" class is used. 
+
+	In both classes, methods are same. but in Assert Class methods are static whereas
+	SoftAssert class methods are non-static, so that we have to create an object for SoftAssert 	class. 
+-----------------------
+Annoations:-
+
+Annotation is a tag that represents the metadata i.e. attached with class, interface, methods or fields to indicate some additional information which can be used by java compiler and JVM.
+
+As per the TestNG following Annotations are existed
+
+Test
+BeforeMethod
+AfterMethod
+BeforeClass
+AfterClass
+BeforeTest
+AfterTest
+BeforeSuite
+AfterSuite
+
+
+flow :-  suite  =>  test  =>  class  =>  method
+------------------
